@@ -11,8 +11,9 @@
       "homepage": "https://github.com/misfist"
     }
   ],
+  "repositories": [],
   "require": {
-      "wpackagist-theme/vantage": "1.5",
+      "wpackagist-theme/vantage": "1.5"
   },
   "keywords": [
     "wordpress"
