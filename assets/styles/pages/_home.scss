@@ -3,3 +3,32 @@
         padding-top: 0;
     }
 }
+
+.jumbotron {
+    .textwidget {
+        padding: 1em;
+        background-color: rgba($color--black,.3);
+        text-shadow: 2px 2px 2px rgba($color--black,.3);
+        h1 {
+            color: $color--white;
+            text-transform: none;
+            line-height: 1.25;
+        }
+    }
+}
+
+
+@include breakpoint(md) {
+    .jumbotron {
+        .textwidget {
+            padding: 2em 5em;
+            h1 {
+                @include font-size(3);
+            }
+        }
+        .button {
+            display: inline-block;
+            max-width: 30%;
+        }
+    }
+}

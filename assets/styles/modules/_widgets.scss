@@ -5,6 +5,15 @@
     .widget-title {
         text-transform: uppercase;
     }
+
+    .so-widget-sow-features {
+        h5 {
+            margin: .25em 0;
+            a {
+                @include font-size(2);
+            }
+        }
+    }
 }
 
 #secondary .widget .widget-title {
