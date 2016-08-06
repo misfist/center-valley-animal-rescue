@@ -1,6 +1,10 @@
 <?php
 /**
  * Remove parent theme admin menus
+ *
+ * @uses admin_init
+ *
+ * @link https://codex.wordpress.org/Plugin_API/Action_Reference/admin_init
  */
 function cvar_remove_parent_admin_menus() {
     remove_submenu_page( 'themes.php', 'siteorigin-theme-about' );
@@ -22,3 +26,14 @@ function cvar_remove_parent_theme_settings( $wp_customize ) {
     $wp_customize->remove_section( 'theme_settings_logo' );
 }
 add_action( 'customize_register', 'cvar_remove_parent_theme_settings', 20 );
+
+/**
+ * Remove parent theme attribution
+ *
+ * @uses vantage_footer_attribution
+ * @link https://developer.wordpress.org/reference/functions/add_filter/
+ */
+function remove_parent_footer_attribution() {
+    return '<div id="theme-attribution">Center Valley Rescue is a nonprofit, tax-exempt 501(c)(3) corporation</div>';
+}
+add_filter( 'vantage_footer_attribution', __return_null );
