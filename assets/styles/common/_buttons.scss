@@ -29,7 +29,8 @@
     @extend %button__default;
 }
 
-a.button {
+a.button,
+.entry-content a.button {
     @extend %button__default;
 }
 
