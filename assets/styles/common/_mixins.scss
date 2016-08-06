@@ -1,0 +1,103 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+@mixin font-face($font-family, $path, $file-name, $svg-label, $font-weight: normal, $font-style: normal) {
+
+  @font-face {
+    font-family: $font-family;
+
+    src: url('#{$path + $file-name}.eot');
+    src: url('#{$path + $file-name}.ttf') format('truetype'),
+    url('#{$path + $file-name}.eot?#iefix') format('embedded-opentype'),
+    url('#{$path + $file-name}.woff') format('woff'),
+    url('#{$path + $file-name}.svg##{$svg-label}') format('svg');
+
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+@mixin visuallyhidden() {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+@mixin visible() {
+  margin: inherit;
+  padding: inherit;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  position: inherit;
+}
+
+@mixin screen-reader-text() {
+  @include visuallyhidden;
+}
+
+/**
+ * RWD Breakpoints
+ */
+@mixin breakpoint($point) {
+  @if $point == xs {
+    @media screen and (min-width: $size__screen-xs)  { @content; }
+  }
+  @if $point == sm {
+    @media screen and (min-width: $size__screen-sm) { @content; }
+  }
+  @if $point == md {
+    @media screen and (min-width: $size__screen-md) { @content; }
+  }
+  @if $point == lg {
+    @media screen and (min-width: $size__screen-lg) { @content; }
+  }
+  @else if $point == xl {
+    @media screen and (min-width: $size__screen-xl) { @content; }
+  }
+}
+
+/**
+ * Lists
+ */
+@mixin no-bullets() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin inline-list() {
+  @include no-bullets();
+  li {
+   display: inline-block;
+ }
+}

@@ -9,4 +9,32 @@ Version:        0.1.0
 Text Domain:    cvar
 */
 
-@import "variables/variables";
+/**
+ * # Base variables
+ */
+@import "variables/index";
+
+/**
+ * # Common Elements
+ */
+@import "common/index";
+
+/**
+ * # Structure
+ */
+@import "structure/index";
+
+/**
+ * # Modules
+ */
+@import "modules/index";
+
+/**
+ * # Pages
+ */
+@import "pages/index";
+
+/**
+ * # Plugins
+ */
+@import "plugins/index";

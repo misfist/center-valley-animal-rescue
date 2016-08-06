@@ -1,9 +1,118 @@
 /*
 Theme Name:     Center Valley Animal Rescue
-Theme URI:      
+Theme URI:      https://github.com/misfist/center-valley-animal-rescue
 Description:    Vantage child theme.
 Author:         Pea <pea@misfist.com>
-Author URI:     
+Author URI:     https://github.com/misfist
 Template:       vantage
 Version:        0.1.0
+Text Domain:    cvar
 */
+/**
+ * # Base variables
+ */
+/**
+ * # Common Elements
+ */
+/**
+ * RWD Breakpoints
+ */
+/**
+ * Lists
+ */
+html,
+body {
+  font-size: 16px; }
+
+a {
+  color: #009688; }
+
+.widget a.button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, .btn-default, a.button {
+  padding: .75em 1.25em;
+  background-color: #ff9800;
+  background-image: none;
+  border-radius: 0;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  text-shadow: none;
+  box-shadow: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem; }
+  .psr__adoptbtn_widget span:hover, .btn-default:hover, a.button:hover, .psr__adoptbtn_widget span:focus, .btn-default:focus, a.button:focus {
+    background-color: #e6e6e6;
+    color: #222; }
+
+.widget a.button, .psr__adoptbtn_widget span, .caldera-grid .btn-default {
+  padding: 1em 2em;
+  font-size: 20px;
+  font-size: 1.25rem; }
+
+.widget .btn,
+.widget a.button,
+.widget .psr__adoptbtn_widget span,
+.widget .caldera-grid .btn {
+  display: block; }
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3em; }
+
+h2 {
+  font-size: 2.25em; }
+
+h3 {
+  font-size: 1.75em; }
+
+h4 {
+  font-size: 1.375em; }
+
+h5 {
+  font-size: 1.125em; }
+
+h6 {
+  font-size: 16px; }
+
+article.post .entry-header h1.entry-title {
+  font-size: 3em; }
+
+#secondary .widget .widget-title {
+  font-size: 1.75em; }
+
+/**
+ * # Structure
+ */
+/**
+ * # Modules
+ */
+.widget a {
+  font-size: 16px; }
+
+.widget .widget-title {
+  color: #ff9800;
+  text-transform: uppercase; }
+
+.main-navigation {
+  background-color: #ff9800;
+  text-transform: uppercase; }
+  .main-navigation a {
+    font-weight: 400;
+    color: #fff; }
+
+/**
+ * # Pages
+ */
+/**
+ * # Plugins
+ */
+.psr__sheltername_inner_widget {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }

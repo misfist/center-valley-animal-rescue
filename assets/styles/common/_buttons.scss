@@ -1,0 +1,58 @@
+%button__default {
+    padding: .75em 1.25em;
+    background-color: $color__warning;
+    background-image: none;
+    border-radius: $element__border-radius;
+    border: none;
+    color: $color__white;
+    font-weight: $font__weight-default;
+    text-shadow: none;
+    box-shadow: none;
+    text-transform: uppercase;
+    text-align: center;
+    @include font-size(1);
+
+    &:hover,
+    &:focus {
+        background-color: $color__light-gray;
+        color: $color__text;
+    }
+}
+
+%button__large {
+    @extend %button__default;
+    padding: 1em 2em;
+    @include font-size(1.25);
+}
+
+.btn-default {
+    @extend %button__default;
+}
+
+a.button {
+    @extend %button__default;
+}
+
+.widget {
+    a.button {
+        @extend %button__large;
+    }
+}
+
+.psr__adoptbtn_widget span {
+    @extend %button__large;
+}
+
+.caldera-grid .btn-default {
+    @extend %button__large;
+}
+
+.widget {
+    .btn,
+    a.button,
+    .psr__adoptbtn_widget span,
+    .caldera-grid .btn {
+        display: block;
+    }
+
+}
