@@ -32,6 +32,7 @@
 a.button,
 .entry-content a.button {
     @extend %button__default;
+    color: $color__white !important;
 }
 
 .widget {

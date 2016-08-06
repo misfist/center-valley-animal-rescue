@@ -51,6 +51,10 @@ a {
   font-size: 20px;
   font-size: 1.25rem; }
 
+a.button,
+.entry-content a.button {
+  color: #fff !important; }
+
 .widget .btn,
 .widget a.button,
 .widget .psr__adoptbtn_widget span,
