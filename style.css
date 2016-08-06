@@ -28,7 +28,7 @@ a {
   color: #9e9e9e; }
 
 .widget a.button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, .btn-default, a.button,
-.entry-content a.button {
+.entry-content p a.button {
   padding: .75em 1.25em;
   background-color: #ff9800;
   background-image: none;
@@ -42,7 +42,9 @@ a {
   text-align: center;
   font-size: 16px;
   font-size: 1rem; }
-  .psr__adoptbtn_widget span:hover, .btn-default:hover, a.button:hover, .psr__adoptbtn_widget span:focus, .btn-default:focus, a.button:focus {
+  .psr__adoptbtn_widget span:hover, .btn-default:hover, a.button:hover,
+  .entry-content p a.button:hover, .psr__adoptbtn_widget span:focus, .btn-default:focus, a.button:focus,
+  .entry-content p a.button:focus {
     background-color: #e6e6e6;
     color: #444; }
 
@@ -52,7 +54,7 @@ a {
   font-size: 1.25rem; }
 
 a.button,
-.entry-content a.button {
+.entry-content p a.button {
   color: #fff !important; }
 
 .widget .btn,

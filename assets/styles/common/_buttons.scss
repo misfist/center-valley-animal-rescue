@@ -30,7 +30,7 @@
 }
 
 a.button,
-.entry-content a.button {
+.entry-content p a.button {
     @extend %button__default;
     color: $color__white !important;
 }
