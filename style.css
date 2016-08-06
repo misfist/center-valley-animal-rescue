@@ -96,6 +96,10 @@ article.post .entry-header h1.entry-title {
   height: 200px;
   width: auto; }
 
+.site-header .custom-logo {
+  height: 200px;
+  width: auto; }
+
 /**
  * # Modules
  */
