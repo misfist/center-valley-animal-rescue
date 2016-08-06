@@ -25,7 +25,7 @@ body {
   font-size: 16px; }
 
 a {
-  color: #009688; }
+  color: #9e9e9e; }
 
 .widget a.button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, .btn-default, a.button {
   padding: .75em 1.25em;
@@ -43,7 +43,7 @@ a {
   font-size: 1rem; }
   .psr__adoptbtn_widget span:hover, .btn-default:hover, a.button:hover, .psr__adoptbtn_widget span:focus, .btn-default:focus, a.button:focus {
     background-color: #e6e6e6;
-    color: #222; }
+    color: #444; }
 
 .widget a.button, .psr__adoptbtn_widget span, .caldera-grid .btn-default {
   padding: 1em 2em;
@@ -84,6 +84,10 @@ article.post .entry-header h1.entry-title {
 /**
  * # Structure
  */
+.logo .logo-height-constrain {
+  height: 200px;
+  width: auto; }
+
 /**
  * # Modules
  */
@@ -91,8 +95,10 @@ article.post .entry-header h1.entry-title {
   font-size: 16px; }
 
 .widget .widget-title {
-  color: #ff9800;
   text-transform: uppercase; }
+
+#secondary .widget .widget-title {
+  color: #ff9800; }
 
 .main-navigation {
   background-color: #ff9800;
@@ -100,6 +106,21 @@ article.post .entry-header h1.entry-title {
   .main-navigation a {
     font-weight: 400;
     color: #fff; }
+  .main-navigation ul li:hover > a,
+  .main-navigation ul li:focus > a {
+    background-color: #428f89; }
+  .main-navigation ul ul {
+    background-color: #ff9800; }
+    .main-navigation ul ul li:hover > a,
+    .main-navigation ul ul li:focus > a {
+      background-color: #428f89; }
+  .main-navigation li.adopt > a {
+    background-color: #97282c;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff; }
+  .main-navigation li.donate > a {
+    background-color: #97282c;
+    border-right: 1px solid #fff; }
 
 /**
  * # Pages

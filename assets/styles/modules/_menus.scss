@@ -5,4 +5,32 @@
         font-weight: $font__weight-default;
         color: $color__white;
     }
+    ul {
+        li {
+            &:hover > a,
+            &:focus > a {
+                background-color: $color__complementary;
+            }
+        }
+        ul {
+            background-color: $color__primary;
+
+            li {
+                &:hover > a,
+                &:focus >  a {
+                    background-color: $color__complementary;
+                }
+            }
+        }
+    }
+
+    li.adopt > a {
+        background-color: $color__secondary;
+        border-right: 1px solid $color__white;
+        border-left: 1px solid $color__white;
+    }
+    li.donate > a {
+        background-color: $color__secondary;
+        border-right: 1px solid $color__white;
+    }
 }

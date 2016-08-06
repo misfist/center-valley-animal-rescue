@@ -2,17 +2,18 @@ $color--black: #000;
 $color--white: #fff;
 
 $color__primary: #ff9800;
-$color__secondary: #009688;
+$color__secondary: #97282c;
+$color__complementary: #428f89;
 
 $color__light-gray: #e6e6e6;
 $color__gray: #9e9e9e;
 $color__dark-gray: gray(75);
 
 $color__background: #fff;
-$color__foreground: #222;
+$color__foreground: #444;
 
 $color__text: $color__foreground;
-$color__links: $color__secondary;
+$color__links: $color__gray;
 
 $color__success: #009688;
 $color__info: #00bcd4;

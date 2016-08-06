@@ -3,7 +3,10 @@
         font-size: $font__size-content;
     }
     .widget-title {
-        color: $color__primary;
         text-transform: uppercase;
     }
+}
+
+#secondary .widget .widget-title {
+    color: $color__primary;
 }
