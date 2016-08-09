@@ -10,3 +10,11 @@
         width: auto;
     }
 }
+
+#masthead {
+    .hgroup {
+        h1 {
+            font-weight: $font__weight-default;
+        }
+    }
+}

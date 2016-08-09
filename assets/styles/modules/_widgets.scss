@@ -14,8 +14,29 @@
             }
         }
     }
+    .promo-subhead {
+        margin-bottom: .25em;
+    }
+    .promo-image {
+        max-height: 250px;
+        overflow: hidden;
+        padding: 0;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
-#secondary .widget .widget-title {
-    color: $color__primary;
+#secondary {
+    .widget {
+        .widget-title {
+            color: $color__primary;
+        }
+        &.promo-widget {
+            .widget-title {
+                margin-bottom: .25em;
+            }
+        }
+    }
 }

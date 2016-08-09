@@ -31,7 +31,7 @@ a,
 .widget a.button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, .btn-default, a.button,
 .entry-content p a.button {
   padding: .75em 1.25em;
-  background-color: #ff9800;
+  background-color: #97282c;
   background-image: none;
   border-radius: 0;
   border: none;
@@ -100,6 +100,9 @@ article.post .entry-header h1.entry-title {
   height: 200px;
   width: auto; }
 
+#masthead .hgroup h1 {
+  font-weight: 400; }
+
 /**
  * # Modules
  */
@@ -115,8 +118,22 @@ article.post .entry-header h1.entry-title {
     font-size: 32px;
     font-size: 2rem; }
 
+.widget .promo-subhead {
+  margin-bottom: .25em; }
+
+.widget .promo-image {
+  max-height: 250px;
+  overflow: hidden;
+  padding: 0; }
+  .widget .promo-image img {
+    width: 100%;
+    height: auto; }
+
 #secondary .widget .widget-title {
   color: #ff9800; }
+
+#secondary .widget.promo-widget .widget-title {
+  margin-bottom: .25em; }
 
 .main-navigation {
   background-color: #ff9800;
@@ -165,6 +182,10 @@ article.post .entry-header h1.entry-title {
     display: inline-block;
     max-width: 30%; } }
 
+.widget_circleicon-widget .circle-icon-box .circle-icon {
+  background-color: #e6e6e6;
+  background-size: 75%; }
+
 /**
  * # Plugins
  */
@@ -177,3 +198,6 @@ article.post .entry-header h1.entry-title {
   clip: rect(0 0 0 0);
   clip: rect(0, 0, 0, 0);
   position: absolute; }
+
+.help-block {
+  font-style: italic; }
