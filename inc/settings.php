@@ -36,4 +36,12 @@ add_action( 'customize_register', 'cvar_remove_parent_theme_settings', 20 );
 function remove_parent_footer_attribution() {
     return '<div id="theme-attribution">Center Valley Rescue is a nonprofit, tax-exempt 501(c)(3) corporation</div>';
 }
-add_filter( 'vantage_footer_attribution', __return_null );
+add_filter( 'vantage_footer_attribution', '__return_null' );
+
+/**
+ * Add Theme Support for Gallery Post Format
+ */
+function cvar_theme_support() {
+    add_theme_support( 'post-formats', array( 'gallery' ) );
+}
+add_action( 'after_setup_theme', 'cvar_theme_support' );
