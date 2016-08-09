@@ -34,7 +34,7 @@ add_action( 'customize_register', 'cvar_remove_parent_theme_settings', 20 );
  * @link https://developer.wordpress.org/reference/functions/add_filter/
  */
 function remove_parent_footer_attribution() {
-    return '<div id="theme-attribution">Center Valley Rescue is a nonprofit, tax-exempt 501(c)(3) corporation</div>';
+    return '<div id="theme-attribution">Center Valley Animal Rescue is a 501(c)(3) non-profit organization.</div>';
 }
 add_filter( 'vantage_footer_attribution', '__return_null' );
 
