@@ -6,7 +6,9 @@
 <header id="masthead" class="site-header" role="banner">
 
 	<div class="hgroup full-container">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><?php vantage_display_logo(); ?></a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><?php vantage_display_logo(); ?>
+		<h1><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></h1>
+		</a>
 
 		<?php if( is_active_sidebar('sidebar-header') ) : ?>
 
