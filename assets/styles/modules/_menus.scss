@@ -24,13 +24,13 @@
         }
     }
 
-    li.adopt > a {
+    li.highlight > a {
         background-color: $color__secondary;
         border-right: 1px solid $color__white;
+    }
+
+    li.highlight-first > a {
         border-left: 1px solid $color__white;
     }
-    li.donate > a {
-        background-color: $color__secondary;
-        border-right: 1px solid $color__white;
-    }
+
 }

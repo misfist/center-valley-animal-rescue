@@ -15,6 +15,18 @@
     .hgroup {
         h1 {
             font-weight: $font__weight-default;
+            color: $color__black;
+        }
+    }
+}
+
+@include breakpoint(md) {
+    #masthead {
+        .hgroup {
+            display: flex;
+            align-items: center;
+            .custom-logo-link {}
+            h1 {}
         }
     }
 }

@@ -101,7 +101,13 @@ article.post .entry-header h1.entry-title {
   width: auto; }
 
 #masthead .hgroup h1 {
-  font-weight: 400; }
+  font-weight: 400;
+  color: #000; }
+
+@media screen and (min-width: 780px) {
+  #masthead .hgroup {
+    display: flex;
+    align-items: center; } }
 
 /**
  * # Modules
@@ -149,13 +155,11 @@ article.post .entry-header h1.entry-title {
     .main-navigation ul ul li:hover > a,
     .main-navigation ul ul li:focus > a {
       background-color: #97282c; }
-  .main-navigation li.adopt > a {
-    background-color: #97282c;
-    border-right: 1px solid #fff;
-    border-left: 1px solid #fff; }
-  .main-navigation li.donate > a {
+  .main-navigation li.highlight > a {
     background-color: #97282c;
     border-right: 1px solid #fff; }
+  .main-navigation li.highlight-first > a {
+    border-left: 1px solid #fff; }
 
 /**
  * # Pages
