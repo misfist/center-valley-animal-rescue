@@ -28,6 +28,14 @@ function cvar_remove_parent_theme_settings( $wp_customize ) {
 add_action( 'customize_register', 'cvar_remove_parent_theme_settings', 20 );
 
 /**
+ * Remove parent theme plugin recommendations
+ */
+function cvar_remove_parent_plugin_recommendations() {
+    remove_action( 'tgmpa_register', 'vantage_recommended_plugins' );
+}
+add_action( 'init', 'cvar_remove_parent_plugin_recommendations' );
+
+/**
  * Remove parent theme attribution
  *
  * @uses vantage_footer_attribution
@@ -45,3 +53,29 @@ function cvar_theme_support() {
     add_theme_support( 'post-formats', array( 'gallery' ) );
 }
 add_action( 'after_setup_theme', 'cvar_theme_support' );
+
+/**
+ * Modify WEN CTA Markup
+ *
+ * @since 1.0.0
+ */
+function cvar_modify_default_cta_theme() {
+
+    $output = '';
+
+    $output .= '<div id="{{custom_id}}" class="{{custom_class}} promo">';
+    $output .= '<h4 class="promo-subhead">';
+    $output .= '{{title}}';
+    $output .= '</h4>';
+    $output .= '<div class="promo-image">';
+    $output .= '{{description}}';
+    $output .= '</div>';
+    $output .= '<div class="promo-button">';
+    $output .= '{{button}}';
+    $output .= '</div>';
+    $output .= '</div>';
+
+    return $output;
+
+}
+add_filter( 'wen_call_to_action_filter_default_cta_theme', 'cvar_modify_default_cta_theme' );

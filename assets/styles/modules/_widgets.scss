@@ -25,11 +25,21 @@
             width: 100%;
             height: auto;
         }
+        p {
+            padding: 0;
+            margin: 0;
+            line-height: 1;
+        }
     }
+
 }
 
 #secondary {
     .widget {
+        &:not(.widget-first) {
+            border-top: 2px solid $color__light-gray;
+            padding-top: 2em;
+        }
         .widget-title {
             color: $color__primary;
         }

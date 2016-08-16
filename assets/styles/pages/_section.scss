@@ -1,0 +1,92 @@
+.page-template-section-index {
+    #primary {
+        float: none;
+        width: 100%;
+    }
+
+    .entry-content {
+        @include font-size(1.25);
+    }
+}
+
+.section-index {
+    @include no-bullets;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        flex: 1 1 100%;
+        position: relative;
+        margin-bottom: .5em;
+
+        &:hover .entry-text {
+          visibility: visible;
+          opacity: 1;
+        }
+    }
+
+    .entry-image {
+        max-height: 175px;
+        overflow: hidden;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .entry-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($color--black, 0.45);
+        color: $color--white;
+        text-overflow: clip ellipsis;
+
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .entry-title {
+        padding: .5em;
+    }
+
+    .entry-excerpt {
+        padding: 1em;
+    }
+
+    .entry-title {
+        background-color: rgba($color--black, 0.75);
+        color: $color--white;
+        &:after {
+            content: ' >';
+        }
+    }
+}
+
+@include breakpoint(sm) {
+    .section-index {
+        li {
+            margin: .5em;
+            flex: 1 1 47%;
+        }
+        .entry-image {
+            max-height: 200px;
+        }
+    }
+}
+
+@include breakpoint(md) {
+    .section-index {
+        li {
+            flex: 1 1 31%;
+        }
+    }
+}

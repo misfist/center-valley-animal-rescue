@@ -1,3 +1,15 @@
 .psr__sheltername_inner_widget {
     @include visuallyhidden;
 }
+
+#petfinder_search_rescue_container {
+    .picture-item__glyph {
+        p {
+            margin: 0;
+        }
+    }
+
+    .psr__grid {
+        display: flex;
+    }
+}

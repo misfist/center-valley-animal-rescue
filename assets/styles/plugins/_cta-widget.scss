@@ -1,0 +1,29 @@
+.wp-cta-widget {
+    .wp-cta-title {
+        text-transform: uppercase;
+        color: $color__primary;
+        font-size: $font__size-h3;
+    }
+    .wp-cta-content {
+        margin-bottom: .25em;
+        font-size: $font__size-h4;
+    }
+    .wp-cta-image {
+        max-height: 250px;
+        overflow: hidden;
+        border-top: 2px solid $color__secondary;
+        border-right: 2px solid $color__secondary;
+        border-left: 2px solid $color__secondary;
+        img {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .wp-cta-button {
+        display: block;
+        margin: 0;
+        @extend %button__large;
+    }
+}
