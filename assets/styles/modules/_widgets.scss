@@ -9,6 +9,7 @@
     .so-widget-sow-features {
         h5 {
             margin: .25em 0;
+            font-family: $font__heading;
             a {
                 @include font-size(2);
             }
@@ -41,7 +42,8 @@
             padding-top: 2em;
         }
         .widget-title {
-            color: $color__primary;
+            color: $color__text;
+            font-weight: $font__weight-default;
         }
         &.promo-widget {
             .widget-title {

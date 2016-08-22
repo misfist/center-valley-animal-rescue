@@ -1,5 +1,5 @@
 .main-navigation {
-    background-color: $color__primary;
+    background-color: $color__secondary;
     text-transform: uppercase;
     a {
         font-weight: $font__weight-default;
@@ -13,7 +13,7 @@
             }
         }
         ul {
-            background-color: $color__primary;
+            background-color: $color__secondary;
 
             li {
                 &:hover > a,
@@ -25,7 +25,7 @@
     }
 
     li.highlight > a {
-        background-color: $color__secondary;
+        background-color: $color__complementary;
         border-right: 1px solid $color__white;
     }
 

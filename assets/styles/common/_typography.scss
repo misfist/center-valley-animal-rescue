@@ -1,5 +1,12 @@
+h1,
+h2,
+h3,
+h4 {
+    font-family: $font__heading;
+}
+
 h1 {
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-size: $font__size-h1;
 }
 

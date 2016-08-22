@@ -31,7 +31,7 @@ a,
 .widget a.button, a.wen-cta-button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, .wp-cta-widget .wp-cta-button, .btn-default, a.button,
 .entry-content p a.button {
   padding: .75em 1.25em;
-  background-color: #97282c;
+  background-color: #D6A337;
   background-image: none;
   border-radius: 0;
   border: none;
@@ -47,7 +47,7 @@ a,
   a.wen-cta-button:hover, .psr__adoptbtn_widget span:hover, .wp-cta-widget .wp-cta-button:hover, .btn-default:hover, a.button:hover,
   .entry-content p a.button:hover, a.wen-cta-button:focus, .psr__adoptbtn_widget span:focus, .wp-cta-widget .wp-cta-button:focus, .btn-default:focus, a.button:focus,
   .entry-content p a.button:focus {
-    background-color: #ff9800;
+    background-color: #960901;
     color: #444; }
 
 .widget a.button, a.wen-cta-button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, .wp-cta-widget .wp-cta-button {
@@ -69,8 +69,14 @@ a.wen-cta-button {
 .widget a.wen-cta-button {
   display: block; }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Rokkitt", "Sanchez", "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
 h1 {
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-size: 3em; }
 
 h2 {
@@ -105,9 +111,21 @@ article.post .entry-header h1.entry-title {
   height: 200px;
   width: auto; }
 
-#masthead .hgroup h1 {
-  font-weight: 400;
-  color: #000; }
+#masthead {
+  background-color: #02535B; }
+  #masthead .hgroup h1 {
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: .75px;
+    font-size: 48px;
+    font-size: 3rem;
+    text-transform: none;
+    text-shadow: 1px 1px 2px rgba(40, 40, 40, 0.5); }
+  #masthead .site-description {
+    font-size: 17.6px;
+    font-size: 1.1rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(40, 40, 40, 0.5); }
 
 @media screen and (min-width: 780px) {
   #masthead .hgroup {
@@ -124,7 +142,8 @@ article.post .entry-header h1.entry-title {
   text-transform: uppercase; }
 
 .widget .so-widget-sow-features h5 {
-  margin: .25em 0; }
+  margin: .25em 0;
+  font-family: "Rokkitt", "Sanchez", "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .widget .so-widget-sow-features h5 a {
     font-size: 32px;
     font-size: 2rem; }
@@ -149,27 +168,28 @@ article.post .entry-header h1.entry-title {
   padding-top: 2em; }
 
 #secondary .widget .widget-title {
-  color: #ff9800; }
+  color: #444;
+  font-weight: 400; }
 
 #secondary .widget.promo-widget .widget-title {
   margin-bottom: .25em; }
 
 .main-navigation {
-  background-color: #ff9800;
+  background-color: #D6A337;
   text-transform: uppercase; }
   .main-navigation a {
     font-weight: 400;
     color: #fff; }
   .main-navigation ul li:hover > a,
   .main-navigation ul li:focus > a {
-    background-color: #97282c; }
+    background-color: #960901; }
   .main-navigation ul ul {
-    background-color: #ff9800; }
+    background-color: #D6A337; }
     .main-navigation ul ul li:hover > a,
     .main-navigation ul ul li:focus > a {
-      background-color: #97282c; }
+      background-color: #960901; }
   .main-navigation li.highlight > a {
-    background-color: #97282c;
+    background-color: #960901;
     border-right: 1px solid #fff; }
   .main-navigation li.highlight-first > a {
     border-left: 1px solid #fff; }
@@ -235,7 +255,7 @@ article.post .entry-header h1.entry-title {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: rgba(150, 9, 1, 0.3);
     color: #fff;
     text-overflow: clip ellipsis;
     visibility: hidden;
@@ -245,7 +265,7 @@ article.post .entry-header h1.entry-title {
   .section-index .entry-excerpt {
     padding: 1em; }
   .section-index .entry-title {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: #D6A337;
     color: #fff; }
     .section-index .entry-title:after {
       content: ' >'; }
@@ -289,7 +309,7 @@ article.post .entry-header h1.entry-title {
 
 .wp-cta-widget .wp-cta-title {
   text-transform: uppercase;
-  color: #ff9800;
+  /*color: $color__primary;*/
   font-size: 1.75em; }
 
 .wp-cta-widget .wp-cta-content {
@@ -299,9 +319,9 @@ article.post .entry-header h1.entry-title {
 .wp-cta-widget .wp-cta-image {
   max-height: 250px;
   overflow: hidden;
-  border-top: 2px solid #97282c;
-  border-right: 2px solid #97282c;
-  border-left: 2px solid #97282c; }
+  border-top: 2px solid #D6A337;
+  border-right: 2px solid #D6A337;
+  border-left: 2px solid #D6A337; }
   .wp-cta-widget .wp-cta-image img {
     margin: 0;
     padding: 0;

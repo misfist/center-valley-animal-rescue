@@ -1,6 +1,6 @@
 %button__default {
     padding: .75em 1.25em;
-    background-color: $color__default;
+    background-color: $color__secondary;
     background-image: none;
     border-radius: $element__border-radius;
     border: none;
@@ -15,7 +15,7 @@
 
     &:hover,
     &:focus {
-        background-color: $color__primary;
+        background-color: $color__complementary;
         color: $color__text;
     }
 }

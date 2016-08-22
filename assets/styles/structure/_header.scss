@@ -12,11 +12,22 @@
 }
 
 #masthead {
+    background-color: $color__primary;
     .hgroup {
         h1 {
+            //font-family: "Roboto Slab";
             font-weight: $font__weight-default;
-            color: $color__black;
+            color: $color--white;
+            letter-spacing: .75px;
+            @include font-size(3);
+            text-transform: none;
+            text-shadow: 1px 1px 2px rgba(40, 40, 40, 0.5);
         }
+    }
+    .site-description {
+        @include font-size(1.1);
+        color: $color--white;
+        text-shadow: 1px 1px 2px rgba(40, 40, 40, 0.5);
     }
 }
 

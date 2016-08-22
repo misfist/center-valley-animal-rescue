@@ -46,7 +46,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba($color--black, 0.45);
+        background-color: rgba($color__complementary, 0.3);
         color: $color--white;
         text-overflow: clip ellipsis;
 
@@ -63,7 +63,7 @@
     }
 
     .entry-title {
-        background-color: rgba($color--black, 0.75);
+        background-color: $color__secondary;
         color: $color--white;
         &:after {
             content: ' >';
