@@ -52,3 +52,16 @@
         }
     }
 }
+
+#masthead .hgroup {
+  a.genericon,
+  a.genericon:visited {
+    color: $color__gray;
+  }
+}
+
+.widget {
+  .genericon {
+    font-size: 180%;
+  }
+}

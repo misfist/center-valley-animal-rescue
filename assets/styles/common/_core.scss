@@ -4,7 +4,23 @@ body {
 }
 body {}
 
+#main {
+    background-color: $color__background;
+}
+
 a,
 .post .entry-content a {
     color: $color__links;
+}
+
+article.post .entry-header h1.entry-title {
+    color: $color__primary;
+}
+
+#masthead {
+  .hgroup {
+    .support-text {
+      display: none;
+    }    
+  }
 }

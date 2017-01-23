@@ -5,7 +5,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package cvar
- * @since cvar 1.0
+ * @since 	cvar 1.0
  * @license GPL 2.0
  */
 

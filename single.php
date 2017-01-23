@@ -2,8 +2,8 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package vantage
- * @since vantage 1.0
+ * @package cvar
+ * @since 	cvar 1.0
  * @license GPL 2.0
  */
 

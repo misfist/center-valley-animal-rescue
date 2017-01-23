@@ -17,6 +17,7 @@
     &:focus {
         background-color: $color__complementary;
         color: $color__text;
+        text-decoration: none;
     }
 }
 
@@ -64,4 +65,8 @@ a.wen-cta-button {
         display: block;
     }
 
+}
+
+.sow-more-text a {
+  @extend %button__default;
 }

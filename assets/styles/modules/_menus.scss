@@ -1,24 +1,28 @@
 .main-navigation {
-    background-color: $color__secondary;
+    background-color: $color__primary;
     text-transform: uppercase;
     a {
         font-weight: $font__weight-default;
         color: $color__white;
+        font-size: $font__size-h6;
     }
+
     ul {
         li {
             &:hover > a,
             &:focus > a {
-                background-color: $color__complementary;
+                background-color: $color__secondary;
             }
         }
         ul {
-            background-color: $color__secondary;
-
+            background-color: $color__secondary-light;
+            a {
+                color: $color--white;
+            }
             li {
                 &:hover > a,
                 &:focus >  a {
-                    background-color: $color__complementary;
+                    background-color: $color__primary-light;
                 }
             }
         }
@@ -26,11 +30,23 @@
 
     li.highlight > a {
         background-color: $color__complementary;
-        border-right: 1px solid $color__white;
+        color: $color__white;
+        &:hover,
+        &:focus {
+            background-color: $color__secondary-light;
+        }
+
     }
 
     li.highlight-first > a {
-        border-left: 1px solid $color__white;
+        margin-right: 1px;
+    }
+
+    li.current-menu-item {
+        background-color: $color__secondary;
+        a {
+          color: $color__white;
+        }
     }
 
 }
