@@ -5,7 +5,7 @@ Description:    Vantage child theme.
 Author:         Pea <pea@misfist.com>
 Author URI:     https://github.com/misfist
 Template:       vantage
-Version:        0.0.2
+Version:        0.0.3
 Text Domain:    cvar
 */
 /**
@@ -216,7 +216,7 @@ article.post .entry-header h1.entry-title {
     .main-navigation ul ul li:focus > a {
       background-color: #4D95A0; }
   .main-navigation li.highlight > a {
-    background-color: #880e4f;
+    background-color: #F2AF00;
     color: #fff; }
     .main-navigation li.highlight > a:hover, .main-navigation li.highlight > a:focus {
       background-color: #F5BF33; }
