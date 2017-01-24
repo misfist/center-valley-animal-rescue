@@ -12,31 +12,44 @@
 }
 
 #masthead {
-    /*background-color: $color__primary;*/
     .hgroup {
         h1 {
+            font-family: $font__logo;
             font-weight: $font__weight-default;
-            color: $color__text;
+            color: $color__primary;
             letter-spacing: .75px;
-            @include font-size(3);
             text-transform: none;
             text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
+            @include font-size(2.5);
+
+            @include breakpoint(md) {
+              @include font-size(3.5);
+            }
+
         }
     }
     .site-description {
-        @include font-size(1.1);
-        color: $color__text;
-        text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
+      @include visuallyhidden;
     }
 }
 
-@include breakpoint(md) {
-    #masthead {
-        .hgroup {
-            display: flex;
-            align-items: center;
-            .custom-logo-link {}
-            h1 {}
+
+#masthead {
+    .hgroup {
+
+      #header-sidebar .widget {
+        display: none !important;
+      }
+
+      @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+        .custom-logo-link {}
+        h1 {}
+        #header-sidebar .widget {
+          display: block !important;
         }
+
+      }
     }
 }

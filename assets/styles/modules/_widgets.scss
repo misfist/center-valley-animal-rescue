@@ -56,12 +56,28 @@
 #masthead .hgroup {
   a.genericon,
   a.genericon:visited {
-    color: $color__gray;
+    color: $color__black;
   }
 }
 
 .widget {
   .genericon {
     font-size: 180%;
+  }
+}
+
+.sow-more-text a {
+	@extend %button__default
+}
+
+.vantage-carousel-title a {
+  &.next,
+  &.previous {
+    border-radius: 0;
+    .vantage-icon-arrow-right,
+    .vantage-icon-arrow-left {
+      color: $color__white;
+    }
+
   }
 }

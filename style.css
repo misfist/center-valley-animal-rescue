@@ -5,7 +5,7 @@ Description:    Vantage child theme.
 Author:         Pea <pea@misfist.com>
 Author URI:     https://github.com/misfist
 Template:       vantage
-Version:        0.0.3
+Version:        0.0.4
 Text Domain:    cvar
 */
 /**
@@ -18,6 +18,9 @@ Text Domain:    cvar
  * RWD Breakpoints
  */
 /**
+ * Flex Columns
+ */
+/**
  * Lists
  */
 html,
@@ -26,6 +29,9 @@ body {
 
 #main {
   background-color: #fff; }
+
+a:hover, a:focus {
+  text-decoration: none; }
 
 a,
 .post .entry-content a {
@@ -37,7 +43,7 @@ article.post .entry-header h1.entry-title {
 #masthead .hgroup .support-text {
   display: none; }
 
-.widget a.button, a.wen-cta-button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, .wp-cta-widget .wp-cta-button, .btn-default, a.button,
+.widget a.button, a.wen-cta-button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, .page-parent .widget_siteorigin-panels-postloop .entry-title, .wp-cta-widget .wp-cta-button, .btn-default, a.button,
 .entry-content p a.button, .sow-more-text a {
   padding: .75em 1.25em;
   background-color: #F2AF00;
@@ -53,14 +59,14 @@ article.post .entry-header h1.entry-title {
   text-decoration: none;
   font-size: 16px;
   font-size: 1rem; }
-  a.wen-cta-button:hover, .psr__adoptbtn_widget span:hover, .wp-cta-widget .wp-cta-button:hover, .btn-default:hover, a.button:hover,
-  .entry-content p a.button:hover, .sow-more-text a:hover, a.wen-cta-button:focus, .psr__adoptbtn_widget span:focus, .wp-cta-widget .wp-cta-button:focus, .btn-default:focus, a.button:focus,
+  a.wen-cta-button:hover, .psr__adoptbtn_widget span:hover, .page-parent .widget_siteorigin-panels-postloop .entry-title:hover, .wp-cta-widget .wp-cta-button:hover, .btn-default:hover, a.button:hover,
+  .entry-content p a.button:hover, .sow-more-text a:hover, a.wen-cta-button:focus, .psr__adoptbtn_widget span:focus, .page-parent .widget_siteorigin-panels-postloop .entry-title:focus, .wp-cta-widget .wp-cta-button:focus, .btn-default:focus, a.button:focus,
   .entry-content p a.button:focus, .sow-more-text a:focus {
     background-color: #880e4f;
     color: #444;
-    text-decoration: none; }
+    text-decoration: none !important; }
 
-.widget a.button, a.wen-cta-button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, .wp-cta-widget .wp-cta-button {
+.widget a.button, a.wen-cta-button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, .page-parent .widget_siteorigin-panels-postloop .entry-title, .wp-cta-widget .wp-cta-button {
   padding: 1em 2em;
   font-size: 20px;
   font-size: 1.25rem; }
@@ -124,26 +130,39 @@ article.post .entry-header h1.entry-title {
   height: 150px;
   width: auto; }
 
-#masthead {
-  /*background-color: $color__primary;*/ }
-  #masthead .hgroup h1 {
-    font-weight: 400;
-    color: #444;
-    letter-spacing: .75px;
-    font-size: 48px;
-    font-size: 3rem;
-    text-transform: none;
-    text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5); }
-  #masthead .site-description {
-    font-size: 17.6px;
-    font-size: 1.1rem;
-    color: #444;
-    text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5); }
+#masthead .hgroup h1 {
+  font-family: "Galada", "Lobster", cursive;
+  font-weight: 400;
+  color: #02535B;
+  letter-spacing: .75px;
+  text-transform: none;
+  text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
+  font-size: 40px;
+  font-size: 2.5rem; }
+  @media screen and (min-width: 780px) {
+    #masthead .hgroup h1 {
+      font-size: 56px;
+      font-size: 3.5rem; } }
+
+#masthead .site-description {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
+#masthead .hgroup #header-sidebar .widget {
+  display: none !important; }
 
 @media screen and (min-width: 780px) {
   #masthead .hgroup {
     display: flex;
-    align-items: center; } }
+    align-items: center; }
+    #masthead .hgroup #header-sidebar .widget {
+      display: block !important; } }
 
 #colophon {
   background-color: gray(75);
@@ -193,10 +212,17 @@ article.post .entry-header h1.entry-title {
 
 #masthead .hgroup a.genericon,
 #masthead .hgroup a.genericon:visited {
-  color: #9e9e9e; }
+  color: #000; }
 
 .widget .genericon {
   font-size: 180%; }
+
+.vantage-carousel-title a.next, .vantage-carousel-title a.previous {
+  border-radius: 0; }
+  .vantage-carousel-title a.next .vantage-icon-arrow-right,
+  .vantage-carousel-title a.next .vantage-icon-arrow-left, .vantage-carousel-title a.previous .vantage-icon-arrow-right,
+  .vantage-carousel-title a.previous .vantage-icon-arrow-left {
+    color: #fff; }
 
 .main-navigation {
   background-color: #02535B;
@@ -233,52 +259,97 @@ article.post .entry-header h1.entry-title {
 .home #main {
   padding-top: 0; }
 
-.home .metaslider .caption-wrap .caption {
-  padding: 1.5em;
-  background-color: rgba(0, 0, 0, 0.3);
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); }
-  .home .metaslider .caption-wrap .caption h2 {
-    margin-bottom: .5em;
-    color: #fff;
-    text-transform: none;
-    line-height: 1.25; }
-  .home .metaslider .caption-wrap .caption h3 {
-    margin-bottom: .75em; }
+@media screen and (min-width: 780px) {
+  .home #main {
+    padding-top: 2em; } }
 
-.home .entry-content {
-  padding-top: 2em; }
-
-.jumbotron .textwidget,
-.jumbotron .caption,
-.metaslider .caption-wrap .textwidget,
-.metaslider .caption-wrap .caption {
-  padding: 1em;
-  background-color: rgba(0, 0, 0, 0.3);
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); }
-  .jumbotron .textwidget h1,
-  .jumbotron .caption h1,
-  .metaslider .caption-wrap .textwidget h1,
-  .metaslider .caption-wrap .caption h1 {
-    color: #fff;
-    text-transform: none;
-    line-height: 1.25; }
+.home #main-slider {
+  display: none; }
 
 @media screen and (min-width: 780px) {
-  .jumbotron .textwidget,
-  .jumbotron .caption,
-  .metaslider .caption-wrap .textwidget,
-  .metaslider .caption-wrap .caption {
-    padding: 2em 5em; }
-    .jumbotron .textwidget h1,
-    .jumbotron .caption h1,
-    .metaslider .caption-wrap .textwidget h1,
-    .metaslider .caption-wrap .caption h1 {
-      font-size: 48px;
-      font-size: 3rem; }
-  .jumbotron .button,
-  .metaslider .caption-wrap .button {
-    display: inline-block;
-    max-width: 30%; } }
+  .home #main-slider {
+    display: block; } }
+
+@media screen and (min-width: 780px) {
+  .home #home-hero {
+    display: none; } }
+
+.home .panel-widget-style.container {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto; }
+  .home .panel-widget-style.container .textwidget {
+    padding: 2em;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    text-align: center; }
+    .home .panel-widget-style.container .textwidget h2 {
+      margin-bottom: .5em;
+      color: #fff;
+      text-transform: none;
+      font-size: 2rem;
+      line-height: 1.2; }
+    .home .panel-widget-style.container .textwidget h3 {
+      margin-bottom: .75em;
+      color: #fff;
+      font-size: 1.75rem;
+      line-height: 1.2; }
+    .home .panel-widget-style.container .textwidget .slide-cta a {
+      font-size: 1.1rem; }
+
+.home .metaslider .caption-wrap {
+  background-color: rgba(0, 0, 0, 0.3); }
+  .home .metaslider .caption-wrap .caption {
+    padding: 2em;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); }
+    .home .metaslider .caption-wrap .caption h2 {
+      margin-bottom: .5em;
+      color: #fff;
+      text-transform: none;
+      font-size: 3rem;
+      line-height: 1.2; }
+    .home .metaslider .caption-wrap .caption h3 {
+      margin-bottom: .75em;
+      font-size: 2.5rem;
+      line-height: 1.1; }
+    .home .metaslider .caption-wrap .caption .slide-cta a {
+      font-size: 1.3rem; }
+
+.page-parent h4 {
+  margin: 0; }
+  .page-parent h4 a {
+    font-size: 2rem; }
+
+.page-parent .panel-grid .meta,
+.page-parent .panel-grid .border,
+.page-parent .panel-grid small {
+  display: none; }
+
+.page-parent .widget_siteorigin-panels-postloop .entry-title {
+  margin-top: -10px; }
+
+.page-parent .widget_siteorigin-panels-postloop .entry-image img {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto; }
+
+@media screen and (min-width: 780px) {
+  .page-parent .widget_siteorigin-panels-postloop {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: -12px !important;
+    margin-right: -12px !important; }
+    .page-parent .widget_siteorigin-panels-postloop article {
+      padding-left: 12px;
+      padding-right: 12px;
+      width: calc(3/6 * 100% - 24px); } }
+
+@media screen and (min-width: 960px) {
+  .page-parent .widget_siteorigin-panels-postloop article {
+    width: calc(2/6 * 100% - 24px); } }
 
 .page-template-section-index #primary {
   float: none;

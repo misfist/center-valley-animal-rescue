@@ -1,6 +1,9 @@
 <?php
 /**
  * Loop Name: Widget
+ *
+ * @package cvar
+ * @since 0.0.4
  */
 ?>
 

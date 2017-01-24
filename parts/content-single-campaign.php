@@ -2,8 +2,8 @@
 /**
  * Displays
  *
- * @package vantage
- * @since vantage 1.0
+ * @package cvar
+ * @since 0.0.4
  * @license GPL 2.0
  */
 ?>

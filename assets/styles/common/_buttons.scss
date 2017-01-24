@@ -17,7 +17,7 @@
     &:focus {
         background-color: $color__complementary;
         color: $color__text;
-        text-decoration: none;
+        text-decoration: none !important;
     }
 }
 

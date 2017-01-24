@@ -87,6 +87,25 @@
 }
 
 /**
+ * Flex Columns
+ */
+$def-pad: 2rem;
+@mixin columns($col-number) {
+	box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: calc(100% + #{$def-pad});
+  margin-left: calc((#{$def-pad} / 2)* -1);
+  >*{
+    flex: $col-number 1 (100% / $col-number);
+    max-width: 100% / $col-number;
+    padding: $def-pad / 2;
+  }
+}
+
+
+/**
  * Lists
  */
 @mixin no-bullets() {
