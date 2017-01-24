@@ -1,3 +1,61 @@
+.page-parent {
+	h4 {
+		margin: 0;
+		a {
+			font-size: 2rem;
+		}
+	}
+	.panel-grid {
+		.meta,
+		.border,
+		small {
+			display: none;
+		}
+	}
+
+	.widget_siteorigin-panels-postloop {
+
+		.entry-title {
+			margin-top: -10px;
+			@extend %button__large;
+		}
+
+		.entry-image {
+			img {
+				padding: 0;
+				margin: 0;
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		@include breakpoint(md) {
+			display: flex;
+	    justify-content: flex-start;
+	    flex-wrap: wrap;
+
+	    margin-left: -12px !important;
+	    margin-right: -12px !important;
+
+			article {
+				padding-left: 12px;
+				padding-right: 12px;
+
+				width: calc(3/6 * 100% - 24px);
+			}
+		}
+
+		@include breakpoint(lg) {
+			article {
+				width: calc(2/6 * 100% - 24px);
+			}
+		}
+
+	}
+
+}
+
+
 .page-template-section-index {
     #primary {
         float: none;

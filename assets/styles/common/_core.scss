@@ -8,6 +8,13 @@ body {}
     background-color: $color__background;
 }
 
+a {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
 a,
 .post .entry-content a {
     color: $color__links;
@@ -21,6 +28,6 @@ article.post .entry-header h1.entry-title {
   .hgroup {
     .support-text {
       display: none;
-    }    
+    }
   }
 }

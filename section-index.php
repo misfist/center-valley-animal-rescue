@@ -3,7 +3,7 @@
  * Template Name: Section Landing
  *
  * @package cvar
- * @since 	cvar 1.0
+ * @since 	0.0.4
  * @license GPL 2.0
  */
 
