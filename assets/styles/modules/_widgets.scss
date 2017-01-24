@@ -81,3 +81,9 @@
 
   }
 }
+
+.header-banner {
+  @extend %container;
+  margin-bottom: .25em;
+  color: $color__white;
+}

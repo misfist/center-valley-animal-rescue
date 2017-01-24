@@ -30,5 +30,29 @@ function cvar_register_sidebars() {
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ) );
+
+    register_sidebar( array(
+        'name' => __( 'Header Banner', 'cvar' ),
+        'id' => 'header-banner',
+        'before_widget' => '<aside id="%1$s" class="widget header-banner %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="screen-reader-text">',
+        'after_title' => '</h3>',
+    ) );
 }
 add_action( 'widgets_init', 'cvar_register_sidebars' );
+
+/**
+ * Setup
+ *
+ * @since 0.0.5
+ *
+ * @return void
+ */
+function cvar_theme_setup() {
+    register_nav_menus( array(
+        'header'    => __( 'Top Menu', 'cvar' ),
+        'footer'    => __( 'Footer Menu', 'cvar' ),
+    ) );
+}
+add_action( 'after_setup_theme', 'cvar_theme_setup' );

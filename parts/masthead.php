@@ -6,12 +6,13 @@
 <header id="masthead" class="site-header" role="banner">
 
 	<div class="hgroup full-container">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo">
-			<div class="site-branding">
-				<?php vantage_display_logo(); ?>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</div>
-			<h1><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></h1>
+
+		<div class="site-branding">
+			<?php vantage_display_logo(); ?>
+		</div>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<h1 class="site-name"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></h1>
+			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</a>
 
 		<?php if( is_active_sidebar('sidebar-header') ) : ?>
@@ -23,12 +24,6 @@
 				dynamic_sidebar( 'sidebar-header' );
 				remove_filter('siteorigin_mobilenav_is_valid', '__return_true');
 				?>
-			</div>
-
-		<?php else : ?>
-
-			<div class="support-text">
-				<?php do_action('vantage_support_text'); ?>
 			</div>
 
 		<?php endif; ?>
