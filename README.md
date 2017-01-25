@@ -3,12 +3,16 @@
 * Contributors: misfist
 * Tags: theme, animals
 * Requires at least: 4.5
-* Stable tag: 0.0.5
+* Stable tag: 0.0.6
 * License: GPLv3
 
 Custom theme for centervalleyanimalrescue.org.
 
 ## Changelog
+
+* 0.0.6 January 25, 2017
+  * Added height and width to `thumbnail` image size
+  * Removed `archive-pet.php` template
 
 * 0.0.5 January 24, 2017
   * Added top menu
