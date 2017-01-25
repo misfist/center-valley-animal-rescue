@@ -14,6 +14,8 @@
 #masthead {
   background-color: $color__white;
     .hgroup {
+      padding-top: 0;
+      padding-bottom: .5em;
         h1 {
             font-family: $font__logo;
             font-weight: $font__weight-default;
@@ -33,11 +35,16 @@
       @include visuallyhidden;
     }
 
+    .support-text {
+      display: none;
+    }
+
     @include breakpoint(md) {
       .site-description {
         @include visible;
         @include font-size(1.75);
         text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
+        color: $color__primary;
       }
     }
 }
