@@ -13,6 +13,10 @@
             &:focus > a {
                 background-color: $color__secondary;
             }
+            a {
+              padding-right: 1em;
+              padding-left: 1em;
+            }
         }
         ul {
             background-color: $color__secondary-light;
@@ -51,13 +55,13 @@
 
 }
 
-#menu-tertiary {
+.top-menu {
   @include visuallyhidden;
 }
 
 @include breakpoint(md) {
 
-  #menu-tertiary {
+  .top-menu {
     @include visible;
     @include no-bullets;
     display: flex;
