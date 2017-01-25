@@ -1,8 +1,19 @@
-.widget_circleicon-widget {
-    .circle-icon-box {
-        .circle-icon {
-            background-color: $color__light-gray;
-            background-size: 75%;
-        }
+
+.vantage-grid-loop {
+  article {
+    .grid-thumbnail {
+      padding: 0;
+      // border: none;
+      border-radius: 0;
+      box-shadow: none;
+
+      &:hover,
+      &:focus {
+        border: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+      }
     }
+  }
 }

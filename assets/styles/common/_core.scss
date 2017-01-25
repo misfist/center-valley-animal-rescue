@@ -1,8 +1,13 @@
-html,
-body {
-    font-size: $font__size-content;
+body,
+button,
+input,
+select,
+textarea {
+  color: $color__text;
+  font-family: $font__main;
+  line-height: 1.5em;
+  font-size: $font__size-content;
 }
-body {}
 
 #main {
     background-color: $color__background;
@@ -22,12 +27,4 @@ a,
 
 article.post .entry-header h1.entry-title {
     color: $color__primary;
-}
-
-#masthead {
-  .hgroup {
-    .support-text {
-      display: none;
-    }
-  }
 }

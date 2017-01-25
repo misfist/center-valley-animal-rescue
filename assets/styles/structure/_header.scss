@@ -12,7 +12,10 @@
 }
 
 #masthead {
+  background-color: $color__white;
     .hgroup {
+      padding-top: 0;
+      padding-bottom: .5em;
         h1 {
             font-family: $font__logo;
             font-weight: $font__weight-default;
@@ -31,6 +34,19 @@
     .site-description {
       @include visuallyhidden;
     }
+
+    .support-text {
+      display: none;
+    }
+
+    @include breakpoint(md) {
+      .site-description {
+        @include visible;
+        @include font-size(1.75);
+        text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
+        color: $color__primary;
+      }
+    }
 }
 
 
@@ -44,12 +60,45 @@
       @include breakpoint(md) {
         display: flex;
         align-items: center;
-        .custom-logo-link {}
-        h1 {}
+
         #header-sidebar .widget {
           display: block !important;
         }
 
       }
     }
+}
+
+.top-nav-container {
+  background-color: $color__white;
+  color: $color__text;
+}
+
+#menu-tertiary {
+  @include no-bullets;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: .5em;
+  padding-bottom: .5em;
+
+  li {
+    padding-left: .5em;
+
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
+  }
+
+  .highlight {
+    &:last-child {
+      margin-right: 1em;
+    }
+    a {
+      /*@extend %button__default;*/
+    }
+  }
 }

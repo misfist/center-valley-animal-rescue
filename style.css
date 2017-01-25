@@ -5,7 +5,7 @@ Description:    Vantage child theme.
 Author:         Pea <pea@misfist.com>
 Author URI:     https://github.com/misfist
 Template:       vantage
-Version:        0.0.4
+Version:        0.0.5
 Text Domain:    cvar
 */
 /**
@@ -23,8 +23,14 @@ Text Domain:    cvar
 /**
  * Lists
  */
-html,
-body {
+body,
+button,
+input,
+select,
+textarea {
+  color: #444;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5em;
   font-size: 16px; }
 
 #main {
@@ -39,9 +45,6 @@ a,
 
 article.post .entry-header h1.entry-title {
   color: #02535B; }
-
-#masthead .hgroup .support-text {
-  display: none; }
 
 .widget a.button, a.wen-cta-button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, .page-parent .widget_siteorigin-panels-postloop .entry-title, .wp-cta-widget .wp-cta-button, .btn-default, a.button,
 .entry-content p a.button, .sow-more-text a {
@@ -122,6 +125,12 @@ article.post .entry-header h1.entry-title {
 /**
  * # Structure
  */
+.header-banner {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; }
+
 .logo .logo-height-constrain {
   height: 200px;
   width: auto; }
@@ -130,29 +139,48 @@ article.post .entry-header h1.entry-title {
   height: 150px;
   width: auto; }
 
-#masthead .hgroup h1 {
-  font-family: "Galada", "Lobster", cursive;
-  font-weight: 400;
-  color: #02535B;
-  letter-spacing: .75px;
-  text-transform: none;
-  text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
-  font-size: 40px;
-  font-size: 2.5rem; }
-  @media screen and (min-width: 780px) {
+#masthead {
+  background-color: #fff; }
+  #masthead .hgroup {
+    padding-top: 0;
+    padding-bottom: .5em; }
     #masthead .hgroup h1 {
-      font-size: 56px;
-      font-size: 3.5rem; } }
-
-#masthead .site-description {
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip: rect(0, 0, 0, 0);
-  position: absolute; }
+      font-family: "Galada", "Lobster", cursive;
+      font-weight: 400;
+      color: #02535B;
+      letter-spacing: .75px;
+      text-transform: none;
+      text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
+      font-size: 40px;
+      font-size: 2.5rem; }
+      @media screen and (min-width: 780px) {
+        #masthead .hgroup h1 {
+          font-size: 56px;
+          font-size: 3.5rem; } }
+  #masthead .site-description {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute; }
+  #masthead .support-text {
+    display: none; }
+  @media screen and (min-width: 780px) {
+    #masthead .site-description {
+      margin: inherit;
+      padding: inherit;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      clip: auto;
+      position: inherit;
+      font-size: 28px;
+      font-size: 1.75rem;
+      text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
+      color: #02535B; } }
 
 #masthead .hgroup #header-sidebar .widget {
   display: none !important; }
@@ -163,6 +191,31 @@ article.post .entry-header h1.entry-title {
     align-items: center; }
     #masthead .hgroup #header-sidebar .widget {
       display: block !important; } }
+
+.top-nav-container {
+  background-color: #fff;
+  color: #444; }
+
+#menu-tertiary {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: .5em;
+  padding-bottom: .5em; }
+  #menu-tertiary li {
+    padding-left: .5em; }
+    #menu-tertiary li a,
+    #menu-tertiary li a:link,
+    #menu-tertiary li a:visited,
+    #menu-tertiary li a:hover,
+    #menu-tertiary li a:focus {
+      text-decoration: none; }
+  #menu-tertiary .highlight:last-child {
+    margin-right: 1em; }
+  #menu-tertiary .highlight a {
+    /*@extend %button__default;*/ }
 
 #colophon {
   background-color: gray(75);
@@ -224,6 +277,14 @@ article.post .entry-header h1.entry-title {
   .vantage-carousel-title a.previous .vantage-icon-arrow-left {
     color: #fff; }
 
+.header-banner {
+  margin-bottom: .25em;
+  color: #fff; }
+
+.widget_circleicon-widget .circle-icon-box .circle-icon {
+  background-color: #e6e6e6;
+  background-size: 75%; }
+
 .main-navigation {
   background-color: #02535B;
   text-transform: uppercase; }
@@ -234,6 +295,9 @@ article.post .entry-header h1.entry-title {
   .main-navigation ul li:hover > a,
   .main-navigation ul li:focus > a {
     background-color: #F2AF00; }
+  .main-navigation ul li a {
+    padding-right: 1em;
+    padding-left: 1em; }
   .main-navigation ul ul {
     background-color: #F5BF33; }
     .main-navigation ul ul a {
@@ -252,6 +316,123 @@ article.post .entry-header h1.entry-title {
     background-color: #F2AF00; }
     .main-navigation li.current-menu-item a {
       color: #fff; }
+
+.top-menu {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
+@media screen and (min-width: 780px) {
+  .top-menu {
+    margin: inherit;
+    padding: inherit;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    position: inherit;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: .5em;
+    padding-bottom: .5em; }
+    .top-menu li {
+      padding-left: .5em; }
+      .top-menu li a,
+      .top-menu li a:link,
+      .top-menu li a:visited,
+      .top-menu li a:hover,
+      .top-menu li a:focus {
+        text-decoration: none; }
+    .top-menu .highlight {
+      margin-right: 1em; } }
+
+.social .icon {
+  font-family: "FontAwesome";
+  font-size: 1.75em;
+  font-style: normal; }
+
+.social .link-text {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
+a[href*=facebook] .icon:before {
+  content: '\f230'; }
+
+a[href*=facebook] .link-text {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
+a[href*=twitter] .icon:before {
+  content: '\f099'; }
+
+a[href*=twitter] .link-text {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
+a[href*=instagram] .icon:before {
+  content: '\f16d'; }
+
+a[href*=instagram] .link-text {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
+a[href*=petfinder] .icon:before {
+  content: '\f1b0'; }
+
+a[href*=petfinder] .link-text {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
+
+a[href*=gofund] .icon:before {
+  content: '\f155'; }
+
+a[href*=gofund] .link-text {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute; }
 
 /**
  * # Pages
@@ -413,9 +594,15 @@ article.post .entry-header h1.entry-title {
   .section-index li {
     flex: 1 1 31%; } }
 
-.widget_circleicon-widget .circle-icon-box .circle-icon {
-  background-color: #e6e6e6;
-  background-size: 75%; }
+.vantage-grid-loop article .grid-thumbnail {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none; }
+  .vantage-grid-loop article .grid-thumbnail:hover, .vantage-grid-loop article .grid-thumbnail:focus {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
 
 /**
  * # Plugins

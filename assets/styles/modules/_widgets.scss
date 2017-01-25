@@ -81,3 +81,18 @@
 
   }
 }
+
+.header-banner {
+  @extend %container;
+  margin-bottom: .25em;
+  color: $color__white;
+}
+
+.widget_circleicon-widget {
+    .circle-icon-box {
+        .circle-icon {
+            background-color: $color__light-gray;
+            background-size: 75%;
+        }
+    }
+}

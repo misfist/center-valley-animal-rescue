@@ -3,12 +3,18 @@
 * Contributors: misfist
 * Tags: theme, animals
 * Requires at least: 4.5
-* Stable tag: 0.0.4
+* Stable tag: 0.0.5
 * License: GPLv3
 
 Custom theme for centervalleyanimalrescue.org.
 
 ## Changelog
+
+* 0.0.5 January 24, 2017
+  * Added top menu
+  * Updated board member templates
+  * Updated forms templates
+  * Updated styling
 
 * 0.0.4 January 23, 2017
   * Added Google fonts for site name

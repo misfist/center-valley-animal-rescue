@@ -31,10 +31,10 @@
 		<?php endif; ?>
 
 		<div class="entry-content">
-			<?php $form_id = get_post_meta( $post->ID, 'file', true ); ?>
+			<?php $form_id = get_post_meta( $post->ID, 'downloadable_form', true ); ?>
 			<?php if( $form_id ) : ?>
 				<?php $url = wp_get_attachment_url( $form_id ); ?>
-				<a href="<?php echo esc_url( $url ); ?>" aria-label="Download" title="<?php echo get_the_title( $form_id ); ?>" class="button"><?php _e( 'Download Form', 'cvar' ); ?> <i class="icon <?php echo get_icon_for_attachment( $form_id ); ?>"></i></a>
+				<a href="<?php echo esc_url( $url ); ?>" aria-label="Download" title="<?php echo get_the_title( $form_id ); ?>" class="button"><i class="icon"></i><?php _e( 'Download Form', 'cvar' ); ?></a>
 			<?php endif; ?>
 
 			<?php the_content(); ?>
@@ -43,7 +43,7 @@
 
 		<?php if( vantage_get_post_categories() && ! is_singular( 'jetpack-testimonial' )) : ?>
 			<div class="entry-categories">
-				<?php echo vantage_get_post_categories() ?>
+				<?php echo get_the_term_list( get_the_ID(), 'type', __( 'Form Type: ', 'cvar' ), ', ', '' ); ?>
 			</div>
 		<?php endif; ?>
 
