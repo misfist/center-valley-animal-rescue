@@ -54,5 +54,7 @@ function cvar_theme_setup() {
         'header'    => __( 'Top Menu', 'cvar' ),
         'footer'    => __( 'Footer Menu', 'cvar' ),
     ) );
+
+    set_post_thumbnail_size( 250, 300, array( 'center', 'top' ) );
 }
 add_action( 'after_setup_theme', 'cvar_theme_setup' );
