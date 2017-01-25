@@ -7,11 +7,12 @@
 	<div class="full-container">
 		<?php wp_nav_menu( array(
 			'theme_location' 	=> 'header',
-			'container'			=> 'nav',
-			'link_before'		=> '<i class="icon" aria-hidden="true"></i><span class="link-text">',
-			'link_after'		=> '</span>',
-			'fallback_cb'		=> false,
-			'depth'				=> 1
+			'menu_class'			=> 'top-menu',
+			'container'				=> 'nav',
+			'link_before'			=> '<i class="icon" aria-hidden="true"></i><span class="link-text">',
+			'link_after'			=> '</span>',
+			'fallback_cb'			=> false,
+			'depth'						=> 1
 		) ); ?>
 	</div>
 </div>
