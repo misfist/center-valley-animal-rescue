@@ -5,7 +5,7 @@ Description:    Vantage child theme.
 Author:         Pea <pea@misfist.com>
 Author URI:     https://github.com/misfist
 Template:       vantage
-Version:        0.0.4
+Version:        0.0.5
 Text Domain:    cvar
 */
 /**
@@ -23,8 +23,14 @@ Text Domain:    cvar
 /**
  * Lists
  */
-html,
-body {
+body,
+button,
+input,
+select,
+textarea {
+  color: #444;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5em;
   font-size: 16px; }
 
 #main {
@@ -39,9 +45,6 @@ a,
 
 article.post .entry-header h1.entry-title {
   color: #02535B; }
-
-#masthead .hgroup .support-text {
-  display: none; }
 
 .widget a.button, a.wen-cta-button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, .page-parent .widget_siteorigin-panels-postloop .entry-title, .wp-cta-widget .wp-cta-button, .btn-default, a.button,
 .entry-content p a.button, .sow-more-text a {
@@ -138,19 +141,22 @@ article.post .entry-header h1.entry-title {
 
 #masthead {
   background-color: #fff; }
-  #masthead .hgroup h1 {
-    font-family: "Galada", "Lobster", cursive;
-    font-weight: 400;
-    color: #02535B;
-    letter-spacing: .75px;
-    text-transform: none;
-    text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
-    font-size: 40px;
-    font-size: 2.5rem; }
-    @media screen and (min-width: 780px) {
-      #masthead .hgroup h1 {
-        font-size: 56px;
-        font-size: 3.5rem; } }
+  #masthead .hgroup {
+    padding-top: 0;
+    padding-bottom: .5em; }
+    #masthead .hgroup h1 {
+      font-family: "Galada", "Lobster", cursive;
+      font-weight: 400;
+      color: #02535B;
+      letter-spacing: .75px;
+      text-transform: none;
+      text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
+      font-size: 40px;
+      font-size: 2.5rem; }
+      @media screen and (min-width: 780px) {
+        #masthead .hgroup h1 {
+          font-size: 56px;
+          font-size: 3.5rem; } }
   #masthead .site-description {
     margin: -1px;
     padding: 0;
@@ -160,6 +166,8 @@ article.post .entry-header h1.entry-title {
     clip: rect(0 0 0 0);
     clip: rect(0, 0, 0, 0);
     position: absolute; }
+  #masthead .support-text {
+    display: none; }
   @media screen and (min-width: 780px) {
     #masthead .site-description {
       margin: inherit;
@@ -171,7 +179,8 @@ article.post .entry-header h1.entry-title {
       position: inherit;
       font-size: 28px;
       font-size: 1.75rem;
-      text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5); } }
+      text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
+      color: #02535B; } }
 
 #masthead .hgroup #header-sidebar .widget {
   display: none !important; }
@@ -272,6 +281,10 @@ article.post .entry-header h1.entry-title {
   margin-bottom: .25em;
   color: #fff; }
 
+.widget_circleicon-widget .circle-icon-box .circle-icon {
+  background-color: #e6e6e6;
+  background-size: 75%; }
+
 .main-navigation {
   background-color: #02535B;
   text-transform: uppercase; }
@@ -282,6 +295,9 @@ article.post .entry-header h1.entry-title {
   .main-navigation ul li:hover > a,
   .main-navigation ul li:focus > a {
     background-color: #F2AF00; }
+  .main-navigation ul li a {
+    padding-right: 1em;
+    padding-left: 1em; }
   .main-navigation ul ul {
     background-color: #F5BF33; }
     .main-navigation ul ul a {
@@ -301,7 +317,7 @@ article.post .entry-header h1.entry-title {
     .main-navigation li.current-menu-item a {
       color: #fff; }
 
-#menu-tertiary {
+.top-menu {
   margin: -1px;
   padding: 0;
   width: 1px;
@@ -312,7 +328,7 @@ article.post .entry-header h1.entry-title {
   position: absolute; }
 
 @media screen and (min-width: 780px) {
-  #menu-tertiary {
+  .top-menu {
     margin: inherit;
     padding: inherit;
     width: auto;
@@ -327,15 +343,15 @@ article.post .entry-header h1.entry-title {
     justify-content: flex-end;
     padding-top: .5em;
     padding-bottom: .5em; }
-    #menu-tertiary li {
+    .top-menu li {
       padding-left: .5em; }
-      #menu-tertiary li a,
-      #menu-tertiary li a:link,
-      #menu-tertiary li a:visited,
-      #menu-tertiary li a:hover,
-      #menu-tertiary li a:focus {
+      .top-menu li a,
+      .top-menu li a:link,
+      .top-menu li a:visited,
+      .top-menu li a:hover,
+      .top-menu li a:focus {
         text-decoration: none; }
-    #menu-tertiary .highlight {
+    .top-menu .highlight {
       margin-right: 1em; } }
 
 .social .icon {
@@ -578,9 +594,15 @@ a[href*=gofund] .link-text {
   .section-index li {
     flex: 1 1 31%; } }
 
-.widget_circleicon-widget .circle-icon-box .circle-icon {
-  background-color: #e6e6e6;
-  background-size: 75%; }
+.vantage-grid-loop article .grid-thumbnail {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none; }
+  .vantage-grid-loop article .grid-thumbnail:hover, .vantage-grid-loop article .grid-thumbnail:focus {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
 
 /**
  * # Plugins
