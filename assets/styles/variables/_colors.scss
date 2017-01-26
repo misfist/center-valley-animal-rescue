@@ -3,11 +3,11 @@ $color--white: #fff;
 
 $color__primary: #02535B;
 $color__secondary: #F2AF00;
-$color__complementary: #880e4f;
+$color__complementary: #960901;
 
-$color__primary-light: #4D95A0;
-$color__secondary-light: #F5BF33;
-$color__complementary-light: #5F6164;
+$color__primary-light: lighten($color__primary, 10%);
+$color__secondary-light: lighten($color__secondary, 10%);
+$color__complementary-light: lighten($color__complementary, 10%);
 
 $color__light-gray: #e6e6e6;
 $color__gray: #9e9e9e;

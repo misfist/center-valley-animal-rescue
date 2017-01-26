@@ -82,6 +82,32 @@
   }
 }
 
+div[class^="so-widget-sow-cta"] {
+
+
+  .sow-cta-text {
+    float: none !important;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  div[class^="so-widget-sow-button"] {
+    float: none !important;
+    margin-left: 0 !important;
+
+    .ow-button-base {
+      a {
+        @extend %button__large;
+        display: block;
+        width: 100%;
+
+      }
+    }
+
+  }
+}
+
+
 .header-banner {
   @extend %container;
   margin-bottom: .25em;
@@ -95,4 +121,26 @@
             background-size: 75%;
         }
     }
+}
+
+.widget.promo {
+  // padding-top: 1px !important;
+  // padding: 1px;
+  // background-color: $color__primary;
+
+  .widget-title {
+
+    color: $color__primary !important;
+    // margin-bottom: 0 !important;
+    // text-align: center;
+    // @extend %button__large;
+    // background-color: $color__secondary;
+    //
+    // &:hover,
+    // &:focus {
+    //   background-color: $color__secondary;
+    // }
+  }
+
+  img {}
 }

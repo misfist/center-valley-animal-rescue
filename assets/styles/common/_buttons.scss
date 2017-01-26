@@ -16,8 +16,14 @@
     &:hover,
     &:focus {
         background-color: $color__complementary;
-        color: $color__text;
+        color: $color__white;
         text-decoration: none !important;
+    }
+
+    a,
+    a:hover {
+      text-decoration: none !important;
+      color: $color__white;
     }
 }
 
@@ -35,6 +41,10 @@ a.button,
 .entry-content p a.button {
     @extend %button__default;
     color: $color__white !important;
+
+    &.button-lg {
+      @extend %button__large;
+    }
 }
 
 .widget {

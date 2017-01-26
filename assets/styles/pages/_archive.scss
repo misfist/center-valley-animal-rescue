@@ -1,9 +1,13 @@
 
 .vantage-grid-loop {
+
   article {
+    .entry-title{
+      @extend %button__large;
+      line-height: 1.2;
+    }
     .grid-thumbnail {
       padding: 0;
-      // border: none;
       border-radius: 0;
       box-shadow: none;
 
@@ -14,6 +18,10 @@
         -moz-box-shadow: none;
         box-shadow: none;
       }
+    }
+
+    .excerpt {
+      line-height: 1.25;
     }
   }
 }
