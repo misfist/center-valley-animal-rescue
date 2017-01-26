@@ -17,8 +17,10 @@
 		<?php if ( ( the_title( '', '', false ) && siteorigin_page_setting( 'page_title' ) ) || ( has_post_thumbnail() && siteorigin_setting('blog_featured_image') ) || ( siteorigin_setting( 'blog_post_metadata' ) && get_post_type() == 'post' ) ) : ?>
 			<header class="entry-header">
 
-				<?php if( has_post_thumbnail() && siteorigin_setting('blog_featured_image') ): ?>
-					<div class="entry-thumbnail"><?php vantage_entry_thumbnail(); ?></div>
+				<?php if( has_post_thumbnail() && siteorigin_setting('blog_featured_image_type') == 'large' ): ?>
+					<div class="entry-thumbnail">
+						<a href="<?php the_permalink() ?>"><?php vantage_entry_thumbnail(); ?></a>
+					</div>
 				<?php endif; ?>
 
 				<?php if ( the_title( '', '', false ) && siteorigin_page_setting( 'page_title' ) ) : ?>
