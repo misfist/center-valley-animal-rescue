@@ -2,10 +2,18 @@
 
 /**
  * Enqueue child styles
+ *
+ * @uses wp_style_is()
+ * @link https://codex.wordpress.org/Function_Reference/wp_style_is
+ *
  * @return void
  */
 function cvar_parent_theme_enqueue_styles() {
     wp_register_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Galada|Lobster' );
+
+    if( !wp_style_is( 'font-awesome', 'registered' ) ) {
+      wp_register_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' );
+    }
 
     wp_enqueue_style( 'vantage-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'center-valley-animal-rescue-style',
@@ -14,6 +22,11 @@ function cvar_parent_theme_enqueue_styles() {
     );
 
     wp_enqueue_style( 'google-fonts' );
+
+    if( !wp_style_is( 'font-awesome', 'enqueued' ) ) {
+      wp_enqueue_style( 'font-awesome' );
+    }
+
 }
 add_action( 'wp_enqueue_scripts', 'cvar_parent_theme_enqueue_styles' );
 
