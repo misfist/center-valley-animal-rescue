@@ -26,12 +26,6 @@
 
 	<?php do_action( 'vantage_before_masthead' ); ?>
 
-	<?php if( is_active_sidebar( 'header-banner') ) : ?>
-		<?php dynamic_sidebar( 'header-banner' ); ?>
-	<?php endif; ?>
-
-	<?php get_template_part( 'parts/menu', 'top' ); ?>
-
 	<?php if( ! siteorigin_page_setting( 'hide_masthead', false ) ) : ?>
 
 		<?php get_template_part( 'parts/masthead', apply_filters( 'vantage_masthead_type', siteorigin_setting( 'layout_masthead' ) ) ); ?>
