@@ -5,6 +5,12 @@
 ?>
 <header id="masthead" class="site-header" role="banner">
 
+	<?php if( is_active_sidebar( 'header-banner') ) : ?>
+		<?php dynamic_sidebar( 'header-banner' ); ?>
+	<?php endif; ?>
+
+	<?php get_template_part( 'parts/menu', 'top' ); ?>
+
 	<div class="hgroup full-container">
 
 		<div class="site-branding">

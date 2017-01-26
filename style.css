@@ -5,7 +5,7 @@ Description:    Vantage child theme.
 Author:         Pea <pea@misfist.com>
 Author URI:     https://github.com/misfist
 Template:       vantage
-Version:        0.0.6
+Version:        0.0.7
 Text Domain:    cvar
 */
 /**
@@ -46,7 +46,8 @@ a,
 article.post .entry-header h1.entry-title {
   color: #02535B; }
 
-.widget a.button, a.wen-cta-button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, .page-parent .widget_siteorigin-panels-postloop .entry-title, .wp-cta-widget .wp-cta-button, .btn-default, a.button,
+a.button.button-lg,
+.entry-content p a.button.button-lg, .widget a.button, a.wen-cta-button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, div[class^="so-widget-sow-cta"] div[class^="so-widget-sow-button"] .ow-button-base a, .vantage-grid-loop article .entry-title, .wp-cta-widget .wp-cta-button, .btn-default, a.button,
 .entry-content p a.button, .sow-more-text a {
   padding: .75em 1.25em;
   background-color: #F2AF00;
@@ -62,14 +63,20 @@ article.post .entry-header h1.entry-title {
   text-decoration: none;
   font-size: 16px;
   font-size: 1rem; }
-  a.wen-cta-button:hover, .psr__adoptbtn_widget span:hover, .page-parent .widget_siteorigin-panels-postloop .entry-title:hover, .wp-cta-widget .wp-cta-button:hover, .btn-default:hover, a.button:hover,
-  .entry-content p a.button:hover, .sow-more-text a:hover, a.wen-cta-button:focus, .psr__adoptbtn_widget span:focus, .page-parent .widget_siteorigin-panels-postloop .entry-title:focus, .wp-cta-widget .wp-cta-button:focus, .btn-default:focus, a.button:focus,
+  a.wen-cta-button:hover, .psr__adoptbtn_widget span:hover, div[class^="so-widget-sow-cta"] div[class^="so-widget-sow-button"] .ow-button-base a:hover, .vantage-grid-loop article .entry-title:hover, .wp-cta-widget .wp-cta-button:hover, .btn-default:hover, a.button:hover,
+  .entry-content p a.button:hover, .sow-more-text a:hover, a.wen-cta-button:focus, .psr__adoptbtn_widget span:focus, div[class^="so-widget-sow-cta"] div[class^="so-widget-sow-button"] .ow-button-base a:focus, .vantage-grid-loop article .entry-title:focus, .wp-cta-widget .wp-cta-button:focus, .btn-default:focus, a.button:focus,
   .entry-content p a.button:focus, .sow-more-text a:focus {
-    background-color: #880e4f;
-    color: #444;
+    background-color: #960901;
+    color: #fff;
     text-decoration: none !important; }
+  a.button.button-lg a,
+  .entry-content p a.button.button-lg a, .widget a.button a, a.wen-cta-button a, .psr__adoptbtn_widget span a, .caldera-grid .btn-default a, div[class^="so-widget-sow-cta"] div[class^="so-widget-sow-button"] .ow-button-base a a, .vantage-grid-loop article .entry-title a, .wp-cta-widget .wp-cta-button a, .btn-default a, a.button a,
+  .entry-content p a.button a, .sow-more-text a a, a.wen-cta-button a:hover, .psr__adoptbtn_widget span a:hover, div[class^="so-widget-sow-cta"] div[class^="so-widget-sow-button"] .ow-button-base a a:hover, .vantage-grid-loop article .entry-title a:hover, .wp-cta-widget .wp-cta-button a:hover, .btn-default a:hover, a.button a:hover, .sow-more-text a a:hover {
+    text-decoration: none !important;
+    color: #fff; }
 
-.widget a.button, a.wen-cta-button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, .page-parent .widget_siteorigin-panels-postloop .entry-title, .wp-cta-widget .wp-cta-button {
+a.button.button-lg,
+.entry-content p a.button.button-lg, .widget a.button, a.wen-cta-button, .psr__adoptbtn_widget span, .caldera-grid .btn-default, div[class^="so-widget-sow-cta"] div[class^="so-widget-sow-button"] .ow-button-base a, .vantage-grid-loop article .entry-title, .wp-cta-widget .wp-cta-button {
   padding: 1em 2em;
   font-size: 20px;
   font-size: 1.25rem; }
@@ -132,31 +139,33 @@ article.post .entry-header h1.entry-title {
   position: relative; }
 
 .logo .logo-height-constrain {
-  height: 200px;
+  height: 125px;
   width: auto; }
 
 .site-header .custom-logo {
-  height: 150px;
+  height: 100px;
   width: auto; }
 
 #masthead {
-  background-color: #fff; }
+  background-color: #02535B; }
   #masthead .hgroup {
     padding-top: 0;
     padding-bottom: .5em; }
+    #masthead .hgroup .site-branding {
+      padding-right: 1em; }
     #masthead .hgroup h1 {
       font-family: "Galada", "Lobster", cursive;
       font-weight: 400;
-      color: #02535B;
+      color: #fff;
       letter-spacing: .75px;
       text-transform: none;
       text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
-      font-size: 40px;
-      font-size: 2.5rem; }
+      font-size: 48px;
+      font-size: 3rem; }
       @media screen and (min-width: 780px) {
         #masthead .hgroup h1 {
-          font-size: 56px;
-          font-size: 3.5rem; } }
+          font-size: 68px;
+          font-size: 4.25rem; } }
   #masthead .site-description {
     margin: -1px;
     padding: 0;
@@ -180,7 +189,7 @@ article.post .entry-header h1.entry-title {
       font-size: 28px;
       font-size: 1.75rem;
       text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
-      color: #02535B; } }
+      color: #fff; } }
 
 #masthead .hgroup #header-sidebar .widget {
   display: none !important; }
@@ -193,33 +202,11 @@ article.post .entry-header h1.entry-title {
       display: block !important; } }
 
 .top-nav-container {
-  background-color: #fff;
-  color: #444; }
-
-#menu-tertiary {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  padding-top: .5em;
-  padding-bottom: .5em; }
-  #menu-tertiary li {
-    padding-left: .5em; }
-    #menu-tertiary li a,
-    #menu-tertiary li a:link,
-    #menu-tertiary li a:visited,
-    #menu-tertiary li a:hover,
-    #menu-tertiary li a:focus {
-      text-decoration: none; }
-  #menu-tertiary .highlight:last-child {
-    margin-right: 1em; }
-  #menu-tertiary .highlight a {
-    /*@extend %button__default;*/ }
+  color: #fff; }
 
 #colophon {
   background-color: gray(75);
-  border-top: 10px solid #5F6164; }
+  border-top: 10px solid #9e9e9e; }
 
 /**
  * # Modules
@@ -277,6 +264,18 @@ article.post .entry-header h1.entry-title {
   .vantage-carousel-title a.previous .vantage-icon-arrow-left {
     color: #fff; }
 
+div[class^="so-widget-sow-cta"] .sow-cta-text {
+  float: none !important;
+  text-transform: uppercase;
+  text-align: center; }
+
+div[class^="so-widget-sow-cta"] div[class^="so-widget-sow-button"] {
+  float: none !important;
+  margin-left: 0 !important; }
+  div[class^="so-widget-sow-cta"] div[class^="so-widget-sow-button"] .ow-button-base a {
+    display: block;
+    width: 100%; }
+
 .header-banner {
   margin-bottom: .25em;
   color: #fff; }
@@ -284,6 +283,9 @@ article.post .entry-header h1.entry-title {
 .widget_circleicon-widget .circle-icon-box .circle-icon {
   background-color: #e6e6e6;
   background-size: 75%; }
+
+.widget.promo .widget-title {
+  color: #02535B !important; }
 
 .main-navigation {
   background-color: #02535B;
@@ -299,17 +301,17 @@ article.post .entry-header h1.entry-title {
     padding-right: 1em;
     padding-left: 1em; }
   .main-navigation ul ul {
-    background-color: #F5BF33; }
+    background-color: #ffc326; }
     .main-navigation ul ul a {
       color: #fff; }
     .main-navigation ul ul li:hover > a,
     .main-navigation ul ul li:focus > a {
-      background-color: #4D95A0; }
+      background-color: #03818d; }
   .main-navigation li.highlight > a {
     background-color: #F2AF00;
     color: #fff; }
     .main-navigation li.highlight > a:hover, .main-navigation li.highlight > a:focus {
-      background-color: #F5BF33; }
+      background-color: #ffc326; }
   .main-navigation li.highlight-first > a {
     margin-right: 1px; }
   .main-navigation li.current-menu-item {
@@ -350,12 +352,13 @@ article.post .entry-header h1.entry-title {
       .top-menu li a:visited,
       .top-menu li a:hover,
       .top-menu li a:focus {
+        color: #fff;
         text-decoration: none; }
     .top-menu .highlight {
       margin-right: 1em; } }
 
 .social .icon {
-  font-family: "FontAwesome";
+  font-family: "FontAwesome", "Font Awesome", "font-awesome";
   font-size: 1.75em;
   font-style: normal; }
 
@@ -434,6 +437,17 @@ a[href*=gofund] .link-text {
   clip: rect(0, 0, 0, 0);
   position: absolute; }
 
+.entry-thumbnail {
+  border: 1px solid #e6e6e6;
+  -webkit-box-shadow: 2px 2px 8px 0px #cccccc;
+  -moz-box-shadow: 2px 2px 8px 0px #cccccc;
+  box-shadow: 2px 2px 8px 0px #cccccc;
+  max-height: 300px;
+  overflow: hidden; }
+  .entry-thumbnail img {
+    width: 100%;
+    height: auto; }
+
 /**
  * # Pages
  */
@@ -497,41 +511,6 @@ a[href*=gofund] .link-text {
     .home .metaslider .caption-wrap .caption .slide-cta a {
       font-size: 1.3rem; }
 
-.page-parent h4 {
-  margin: 0; }
-  .page-parent h4 a {
-    font-size: 2rem; }
-
-.page-parent .panel-grid .meta,
-.page-parent .panel-grid .border,
-.page-parent .panel-grid small {
-  display: none; }
-
-.page-parent .widget_siteorigin-panels-postloop .entry-title {
-  margin-top: -10px; }
-
-.page-parent .widget_siteorigin-panels-postloop .entry-image img {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: auto; }
-
-@media screen and (min-width: 780px) {
-  .page-parent .widget_siteorigin-panels-postloop {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-left: -12px !important;
-    margin-right: -12px !important; }
-    .page-parent .widget_siteorigin-panels-postloop article {
-      padding-left: 12px;
-      padding-right: 12px;
-      width: calc(3/6 * 100% - 24px); } }
-
-@media screen and (min-width: 960px) {
-  .page-parent .widget_siteorigin-panels-postloop article {
-    width: calc(2/6 * 100% - 24px); } }
-
 .page-template-section-index #primary {
   float: none;
   width: 100%; }
@@ -568,7 +547,7 @@ a[href*=gofund] .link-text {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(136, 14, 79, 0.3);
+    background-color: rgba(150, 9, 1, 0.3);
     color: #fff;
     text-overflow: clip ellipsis;
     visibility: hidden;
@@ -594,6 +573,9 @@ a[href*=gofund] .link-text {
   .section-index li {
     flex: 1 1 31%; } }
 
+.vantage-grid-loop article .entry-title {
+  line-height: 1.2; }
+
 .vantage-grid-loop article .grid-thumbnail {
   padding: 0;
   border-radius: 0;
@@ -603,6 +585,9 @@ a[href*=gofund] .link-text {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none; }
+
+.vantage-grid-loop article .excerpt {
+  line-height: 1.25; }
 
 /**
  * # Plugins

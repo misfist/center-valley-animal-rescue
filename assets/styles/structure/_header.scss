@@ -1,32 +1,35 @@
 .logo {
     .logo-height-constrain {
-        height: 200px;
+        height: 125px;
         width: auto;
     }
 }
 .site-header {
     .custom-logo {
-        height: 150px;
+        height: 100px;
         width: auto;
     }
 }
 
 #masthead {
-  background-color: $color__white;
+  background-color: $color__primary;
     .hgroup {
       padding-top: 0;
       padding-bottom: .5em;
+        .site-branding {
+          padding-right: 1em;
+        }
         h1 {
             font-family: $font__logo;
             font-weight: $font__weight-default;
-            color: $color__primary;
+            color: $color__white;
             letter-spacing: .75px;
             text-transform: none;
             text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
-            @include font-size(2.5);
+            @include font-size(3);
 
             @include breakpoint(md) {
-              @include font-size(3.5);
+              @include font-size(4.25);
             }
 
         }
@@ -44,7 +47,7 @@
         @include visible;
         @include font-size(1.75);
         text-shadow: 1px 1px 1px rgba(40, 40, 40, 0.5);
-        color: $color__primary;
+        color: $color__white;
       }
     }
 }
@@ -70,35 +73,6 @@
 }
 
 .top-nav-container {
-  background-color: $color__white;
-  color: $color__text;
-}
-
-#menu-tertiary {
-  @include no-bullets;
-  display: flex;
-  justify-content: flex-end;
-  padding-top: .5em;
-  padding-bottom: .5em;
-
-  li {
-    padding-left: .5em;
-
-    a,
-    a:link,
-    a:visited,
-    a:hover,
-    a:focus {
-      text-decoration: none;
-    }
-  }
-
-  .highlight {
-    &:last-child {
-      margin-right: 1em;
-    }
-    a {
-      /*@extend %button__default;*/
-    }
-  }
+  // background-color: $color__white;
+  color: $color__white;
 }
