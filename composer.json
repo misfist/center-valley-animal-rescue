@@ -1,9 +1,9 @@
 {
-  "name": "misfist/center-valley-animal-rescue",
+  "name": "CenterValleyAnimalRescue/center-valley-animal-rescue",
   "type": "wordpress-theme",
   "license": "GPL-3.0",
   "description": "Custom theme for centervalleyanimalrescue.org.",
-  "homepage": "https://github.com/misfist/center-valley-animal-rescue",
+  "homepage": "https://github.com/CenterValleyAnimalRescue/center-valley-animal-rescue",
   "authors": [
     {
       "name": "Pea",
@@ -12,9 +12,7 @@
     }
   ],
   "repositories": [],
-  "require": {
-      "wpackagist-theme/vantage": "1.5"
-  },
+  "require": {},
   "keywords": [
     "wordpress"
   ]
