@@ -11,8 +11,37 @@
       "homepage": "https://github.com/misfist"
     }
   ],
-  "repositories": [],
-  "require": {},
+  "repositories": [
+    {
+        "type":"composer",
+        "url":"https://wpackagist.org"
+    },
+    {
+        "type": "package",
+        "package": {
+            "name": "CenterValleyAnimalRescue/petfinder",
+            "version": "v4.2.2",
+            "type": "wordpress-plugin",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/CenterValleyAnimalRescue/petfinderAPI4everybody/archive/master.zip"
+            },
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CenterValleyAnimalRescue/petfinderAPI4everybody.git",
+                "reference": "master"
+            }
+        }
+    }
+  ],
+  "require": {
+    "CenterValleyAnimalRescue/petfinder": "v4.2.2"
+  },
+  "extra": {
+      "installer-paths": {
+          "./assets/js/{$name}/": ["type:wordpress-plugin"]
+      }
+  },
   "keywords": [
     "wordpress"
   ]
