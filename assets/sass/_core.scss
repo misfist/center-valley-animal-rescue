@@ -1,0 +1,113 @@
+#header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header_top_outer,
+.header_bot_outer {
+  background-color: $color__primary !important;
+}
+
+.header_top_outer .meta_wrap {
+  color: white;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.header_top_inner {
+
+  a {
+    color: $color__white !important;
+  }
+
+  .social_wrap {
+    * {
+      height: 30px;
+    }
+    ul {
+      width: auto;
+      padding-right: 1em;
+    }
+    li,
+    a {
+      width: 30px;
+    }
+    a:before {
+      font-size: 26px;
+    }
+  }
+  /*.social_wrap li,
+  .social_wrap a {
+    height: 50px;
+  }*/
+}
+
+.logo_wrap {
+  img {
+    max-height: 100px !important;
+  }
+}
+
+.headline_outer {
+  background-color: $color__highlight;
+  margin-bottom: 2em;
+}
+
+.meta_wrap.site-title a {
+  font-style: normal;
+  font-size: 1.6rem;
+}
+
+/* Slider */
+.ls-inner {
+  h1 {
+    color: white;
+    font-style: italic;
+    font-size: 105px;
+    line-height: 95px;
+    font-weight: normal;
+  }
+  h3 {
+    color: white;
+  }
+
+}
+
+/* Individual Pages */
+.entry-title {
+  color: white;
+}
+
+/* Adoption Listing */
+.pet-filter.widget label {
+  display: block;
+}
+
+.pet-profile {
+  .actions {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .pet-title {
+    text-align: left;
+  }
+
+  .gallery {
+    display: flex;
+    width: 100%;
+
+    a {
+      display: block;
+      flex: 1 1 auto;
+      max-height: 200px;
+      overflow: hidden;
+    }
+
+    img {
+      object-fit: cover;
+    }
+
+  }
+}
