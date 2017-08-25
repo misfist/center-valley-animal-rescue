@@ -16,8 +16,11 @@
 
 get_header(); ?>
 
+	<aside data-petfinder="aside" class="pet-filter widget"></aside>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
 
 			<?php
 			while ( have_posts() ) : the_post();
@@ -32,9 +35,15 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
+			<div data-petfinder="main" class="grid">
+				<!-- Required -->
+				<!-- Main pet content will be generated here -->
+				<a href="https://awos.petfinder.com/shelters/WA142.html"><?php _e( 'View our adoptable pets on Petfinder.', 'cvar' ); ?></a>
+			</div>
+
 		</main>
 	</div>
-<aside data-petfinder="aside" class="pet-filter widget"></aside>
 <?php
 get_sidebar();
 get_footer();
+?>

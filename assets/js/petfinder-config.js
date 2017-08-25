@@ -14,13 +14,13 @@
         + '<strong>{{animal}}</strong> - {{age}}, {{gender}}, {{size}}'
       + '</div>'
       + ( typeof description !== 'undefined' ? '<div class="entry-content">{{description}}</div>' : '' )
-      + '<div class="actions"><a href="{{url.pet}}" class="cmsms_button"><?php _e( 'View Full Profile', 'cvar' ); ?></a></div>'
+      + '<div class="actions"><a href="{{url.pet}}" class="button">View Full List</a></div>'
     + '</div>'
   + '</article>';
 
   var onePet =
     '<div class="pet-profile">'
-      + '<div class="actions"><a href="{{url.all}}" class="button">&larr; <?php _e( 'Back to Full List', 'cvar' ); ?></a></div>'
+      + '<div class="actions"><a href="{{url.all}}" class="button">&larr; Back to List</a></div>'
       + '<article class="{{classes}}" id="pet-{{id}}">'
         + '<div class="gallery">'
           + '<a target="_blank" href="{{photo.1.large}}"><img src="{{photo.1.thumbnail.large}}"></a>&nbsp;'
@@ -34,18 +34,18 @@
           + '</div>'
           + '<div>{{options.multi}}</div>'
           + ( typeof description !== 'undefined' ? '<div class="entry-content">{{description}}</div>' : '' )
-        + '<div class="actions"><a href="/adoption-application/" class="cmsms_button"><?php _e( 'Adoption Application', 'cvar' ); ?></a></div>'
-        + '<div class="actions"><a href="{{url.petfinder}}" class="button cmsms_button" target="_black"><?php _e( 'View Full Profile', 'cvar' ); ?></a></div>'
+        + '<div class="actions"><a href="/adoption-application/" class="button">Adoption Application</a></div>'
+        + '<div class="actions"><a href="{{url.petfinder}}" class="button" target="_blank">View Full List</a></div>'
       + '</article>'
     + '</div>'
 
   var asideAllPets =
-  '<h4 class="widget-title"><?php _e( 'Filter by Type', 'cvar' ); ?></h4>' +
+  '<h4 class="widget-title">Filter By Type</h4>' +
   '{{checkbox.animals.toggle}}';
 
   petfinderAPI.init({
-    key: '07b2fb336e04cf44324020aeacfb867a', // Learn more: https://www.petfinder.com/developers/api-key
-    shelter: 'WA142',
+    key: petfinder_vars.key, // Learn more: https://www.petfinder.com/developers/api-key
+    shelter: petfinder_vars.shelter,
     templates: {
       allPets: allPets,
       onePet: onePet,
