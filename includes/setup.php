@@ -23,6 +23,26 @@ function cvar_custom_navigation_menus() {
 add_action( 'init', 'cvar_custom_navigation_menus' );
 
 /**
+ * Register Sidebar
+ *
+ * @since 3.0.0
+ *
+ * @return void
+ */
+function cvar_widgets_init() {
+  register_sidebar( array(
+    'name'          => __( 'Site Info (footer)', 'cvar' ),
+    'id'            => 'site-info',
+    'description'   => 'Widget area below footer',
+    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. slbd_count_widgets( 'site-info' ) .'">',
+    'after_widget'   => '</div><!-- .footer-widget -->',
+    'before_title'   => '<h3 class="widget-title">',
+    'after_title'    => '</h3>',
+    ) );
+  }
+  add_action( 'widgets_init', 'cvar_widgets_init' );
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.

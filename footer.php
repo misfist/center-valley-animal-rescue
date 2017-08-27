@@ -33,6 +33,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 							)
 						); ?>
 
+						<?php if ( is_active_sidebar( 'site-info' ) ) : ?>
+
+							<div class="site-info-widgets">
+
+								<!-- ******************* The Site Info Widget Area ******************* -->
+
+									<?php dynamic_sidebar( 'site-info' ); ?>
+
+							</div>
+
+						<?php endif; ?>
+
 					</div><!-- .site-info -->
 
 				</footer><!-- #colophon -->
