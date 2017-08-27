@@ -6,10 +6,10 @@
   var allPets =
     '<article class="{{classes}} profile pet-profile card text-center" id="pet-{{id}}">'
     // + '<figure class="entry-thumbnail">'
-      + '<img src="{{photo.1.medium}}" class="attachment-blog-masonry-thumb card-img-top img-fluid">'
+      + '<a href="{{url.pet}}" title="{{name}}"><img src="{{photo.1.medium}}" class="attachment-blog-masonry-thumb card-img-top img-fluid"></a>'
     // + '</figure>'
     + '<div class="pl_content card-block">'
-      + '<h3 class="entry-title card-title"><a href="{{url.pet}}">{{name}}</a></h3>'
+      + '<h3 class="entry-title card-title"><a href="{{url.pet}}" title="{{name}}">{{name}}</a></h3>'
       + '<div class="pl_subtitle card-text">'
         + '<strong>{{animal}}</strong> - {{age}}, {{gender}}, {{size}}'
       + '</div>'
