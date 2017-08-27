@@ -119,13 +119,12 @@ body {
 #left-sidebar,
 #right-sidebar {
   .widget {
+    margin-bottom: $spacer;
     padding: $spacer;
     background-color: $gray-lighter;
     border-right: 4px solid darken( $gray-lighter, 5% );
     border-bottom: 4px solid darken( $gray-lighter, 5% );
     border-radius: 2px;
-
-    margin-bottom: $spacer;
   }
 
   .pet-filter {

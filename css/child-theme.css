@@ -9230,12 +9230,12 @@ body {
 
 #left-sidebar .widget,
 #right-sidebar .widget {
+  margin-bottom: 1rem;
   padding: 1rem;
   background-color: #ccc;
   border-right: 4px solid #bfbfbf;
   border-bottom: 4px solid #bfbfbf;
-  border-radius: 2px;
-  margin-bottom: 1rem; }
+  border-radius: 2px; }
 
 #left-sidebar .pet-filter.widget,
 #right-sidebar .pet-filter.widget {
