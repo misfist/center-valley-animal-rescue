@@ -9220,15 +9220,26 @@ body {
   overflow: hidden;
   position: absolute !important; }
 
-#left-sidebar .widget {
-  padding: 1rem;
-  background-color: #ccc; }
-  @media (max-width: 767px) {
-    #left-sidebar .widget {
-      margin-bottom: 1rem; } }
+.home #page-wrapper,
+.home #full-width-page-wrapper {
+  padding-top: 0; }
 
-#left-sidebar .widget + .widget {
+.widget_media_image img {
+  width: 100%;
+  height: auto; }
+
+#left-sidebar .widget,
+#right-sidebar .widget {
+  padding: 1rem;
+  background-color: #ccc;
+  border-right: 4px solid #bfbfbf;
+  border-bottom: 4px solid #bfbfbf;
+  border-radius: 2px;
   margin-bottom: 1rem; }
+
+#left-sidebar .pet-filter.widget,
+#right-sidebar .pet-filter.widget {
+  border: none; }
 
 #wrapper-footer {
   background-color: #02535B;

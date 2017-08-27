@@ -104,18 +104,34 @@ body {
   }
 }
 
-#left-sidebar {
+.home {
+  #page-wrapper,
+  #full-width-page-wrapper {
+    padding-top: 0;
+  }
+}
+
+.widget_media_image img {
+	width: 100%;
+	height: auto;
+}
+
+#left-sidebar,
+#right-sidebar {
   .widget {
     padding: $spacer;
     background-color: $gray-lighter;
+    border-right: 4px solid darken( $gray-lighter, 5% );
+    border-bottom: 4px solid darken( $gray-lighter, 5% );
+    border-radius: 2px;
 
-    @include media-breakpoint-down(sm) {
-      margin-bottom: $spacer;
-    }
+    margin-bottom: $spacer;
   }
 
-  .widget + .widget {
-    margin-bottom: $spacer;
+  .pet-filter {
+    &.widget {
+      border: none;
+    }
   }
 }
 
