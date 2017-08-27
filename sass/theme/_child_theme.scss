@@ -1,0 +1,198 @@
+html {
+  font-size: 12px;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 18px;
+  }
+}
+
+body {
+  font-size: $font-size-base;
+  font-family: $font-family-sans-serif;
+}
+
+/*$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.25rem;
+$font-size-h6: 1rem;*/
+
+.custom-logo-link {
+  img {
+    height: 125px;
+    width: auto;
+  }
+}
+
+.navbar-collapse {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+
+#wrapper-footer {
+  background-color: $brand-primary;
+
+  a,
+  a:hover {
+    color: $white;
+  }
+
+  ul {
+    @include no-bullets;
+    text-align: center;
+  }
+}
+
+.jetpack-social-navigation {
+  align-self: center;
+
+  ul {
+    margin-bottom: 0 !important;
+    a {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.bg-dark {
+  background-color: $brand-primary !important;
+
+  a,
+  a:hover {
+    color: $white;
+  }
+}
+
+#top-bar {
+  background-color: $gray-dark;
+  color: $white;
+
+  a,
+  a:hover {
+    color: $white;
+  }
+
+}
+
+#wrapper-static-hero {
+  padding-top: 0;
+
+  .widget-count-2,
+  .col-md-6 {
+    width: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .widget_text {
+    width: $size__site-width;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+}
+
+.static-hero-widget {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.home .site-main,
+.page-adopt .site-main {
+  & > article {
+    & > .entry-header {
+      @include visually-hidden;
+    }
+  }
+}
+
+#left-sidebar {
+  .widget {
+    padding: $spacer;
+    background-color: $gray-lighter;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: $spacer;
+    }
+  }
+
+  .widget + .widget {
+    margin-bottom: $spacer;
+  }
+}
+
+// Grid
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .card {
+    padding: 1em;
+    margin-bottom: $spacer;
+    margin-right: $spacer / 2;
+    margin-left: $spacer / 2;
+    flex: 0 1 100%;
+
+    @include media-breakpoint-up(sm) {
+      flex-basis: calc( 50% - #{($spacer)} );
+    }
+
+    @include media-breakpoint-up(md) {
+      flex-basis: calc( 33.33% - #{($spacer)} );
+    }
+
+    .card-img-top {
+      @include aspect-ratio(3,2);
+      background-position: center top;
+      background-size: cover;
+      margin-bottom: $spacer;
+    }
+
+  }
+
+}
+
+.pet-profile {
+  width: 100%;
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    a {
+      flex-basis: auto;
+    }
+  }
+
+  .actions {
+    margin-top: $spacer;
+  }
+}
+
+button,
+.btn {
+  text-transform: uppercase;
+}
+
+.screen-reader-text {
+  @include visually-hidden;
+}
