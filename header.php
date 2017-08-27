@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="wrapper-fluid" id="top-bar">
 		<div class="container top-bar">
 			<div class="row justify-content-between">
-				<?php if( $tagline = get_bloginfo( 'description' ) ) : ?>
+				<?php if( $tagline = get_bloginfo( 'name' ) ) : ?>
 					<div class="site-tagline navbar-text">
 						<?php esc_html_e( $tagline, 'cvar' ); ?>
 					</div>
