@@ -209,6 +209,73 @@ body {
   }
 }
 
+.void-grid {
+  .minimal {
+    @extend .card-deck;
+
+    .row {
+      padding: $spacer;
+    }
+
+    .col-md-12 {
+      @extend .card;
+      padding: 0;
+      margin: 0;
+    }
+
+    .item {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .post-img {
+      margin-bottom: $spacer;
+      img {
+        @extend .card-img-top;
+      }
+    }
+
+    .post-info {
+      padding-right: $spacer;
+      padding-left: $spacer;
+      padding-bottom: $spacer;
+    }
+
+    .entry-title {
+      a {
+        font-size: 1rem;
+      }
+
+    }
+  }
+
+}
+
+.post-grid {
+
+  /*.grid-items {
+    @extend .card-deck;
+  }*/
+
+  /*.item {
+    @extend .card;
+  }*/
+  /*.layer-media {
+    height: 200px !important;
+    width: 200px !important;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }*/
+}
+
 button,
 .btn {
   text-transform: uppercase;

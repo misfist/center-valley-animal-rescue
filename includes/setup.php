@@ -57,6 +57,10 @@ add_filter( 'understrap_content_width', 'cvar_content_width' );
 
 add_image_size( 'slider', 1200, 480, true );
 
+update_option( 'thumbnail_size_w', 300 );
+update_option( 'thumbnail_size_h', 200 );
+update_option( 'thumbnail_crop', 1 );
+
 
 /**
  * Adds a css class to the body element
