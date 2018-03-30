@@ -89,7 +89,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								'menu_class'      => 'navbar-nav',
 								'fallback_cb'     => '',
 								'menu_id'         => 'main-menu',
-								'depth'						=> 1,
+								'depth'						=> 2,
 								'walker'          => new WP_Bootstrap_Navwalker(),
 							)
 						); ?>
@@ -102,8 +102,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 								'menu_class'      => 'navbar-nav',
 								'fallback_cb'     => '',
 								'menu_id'         => 'main-menu',
-								'depth'						=> 1,
+								'depth'						=> 2,
 								'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+							)
+						); ?>
+					<?php else : ?>
+						<?php wp_nav_menu(
+							array(
+								'theme_location'  => 'primary',
+								'container_class' => 'navbar-collapse justify-content-end',
+								'container_id'    => 'navbarNavDropdown',
+								'menu_class'      => 'navbar-nav',
+								'fallback_cb'     => '',
+								'menu_id'         => 'main-menu',
+								'depth'						=> 2,
 							)
 						); ?>
 					<?php endif; ?>
