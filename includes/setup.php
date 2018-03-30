@@ -30,11 +30,12 @@ add_action( 'init', 'cvar_custom_navigation_menus' );
  * @return void
  */
 function cvar_widgets_init() {
+  $class = cvar_widget_class( 'site-info' );
   register_sidebar( array(
     'name'          => __( 'Site Info (footer)', 'cvar' ),
     'id'            => 'site-info',
     'description'   => 'Widget area below footer',
-    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. slbd_count_widgets( 'site-info' ) .'">',
+    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s ' . $class . '">',
     'after_widget'   => '</div><!-- .footer-widget -->',
     'before_title'   => '<h3 class="widget-title">',
     'after_title'    => '</h3>',
@@ -79,3 +80,52 @@ function cvar_body_class_for_pages( $classes ) {
 
 }
 add_filter( 'body_class', 'cvar_body_class_for_pages' );
+
+/**
+ * Count Widgets
+ *
+ * @param  string $sidebar_name
+ * @return string $class
+ */
+function cvar_widget_class( $sidebar_name ) {
+	global $sidebars_widgets;
+	$count = count( $sidebars_widgets[$sidebar_name] );
+
+	switch ( $count ) {
+		case '1':
+			$class = 'one';
+			break;
+		case '2':
+			$class = 'two';
+			break;
+		case '3':
+			$class = 'three';
+			break;
+		case '4':
+			$class = 'four';
+			break;
+		case '5':
+			$class = 'five';
+			break;
+		case '6':
+			$class = 'six';
+			break;
+		case '7':
+			$class = 'seven';
+			break;
+		case '8':
+			$class = 'eight';
+			break;
+		case '9':
+			$class = 'nine';
+			break;
+		case '10':
+			$class = 'ten';
+			break;
+		default:
+			$class = '';
+			break;
+	}
+	return $class;
+
+}
