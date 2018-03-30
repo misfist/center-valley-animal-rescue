@@ -8,3 +8,4 @@
 
 include_once( get_stylesheet_directory() . '/includes/setup.php' );
 include_once( get_stylesheet_directory() . '/includes/enqueue.php' );
+include_once( get_stylesheet_directory() . '/includes/bootstrap-wp-navwalker.php' );
