@@ -85,8 +85,10 @@ add_filter( 'body_class', 'cvar_body_class_for_pages' );
  *
  * @return void
  */
-function components_social_menu() {
-  if ( !function_exists( 'jetpack_social_menu' ) ) {
-    jetpack_social_menu();
+if( !function_exists( 'components_social_menu' ) ) {
+  function components_social_menu() {
+    if ( !function_exists( 'jetpack_social_menu' ) ) {
+      jetpack_social_menu();
+    }
   }
 }
