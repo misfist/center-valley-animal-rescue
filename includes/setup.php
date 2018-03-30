@@ -34,7 +34,7 @@ function cvar_widgets_init() {
     'name'          => __( 'Site Info (footer)', 'cvar' ),
     'id'            => 'site-info',
     'description'   => 'Widget area below footer',
-    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. slbd_count_widgets( 'site-info' ) .'">',
+    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s">',
     'after_widget'   => '</div><!-- .footer-widget -->',
     'before_title'   => '<h3 class="widget-title">',
     'after_title'    => '</h3>',
