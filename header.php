@@ -36,8 +36,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				<?php endif; ?>
 
-				<?php if( $social_menu = components_social_menu() ) : ?>
-					<?php $social_menu; ?>
+				<?php if( function_exists( 'components_social_menu' ) ) : ?>
+					<?php if( $social_menu = components_social_menu() ) : ?>
+						<?php $social_menu; ?>
+					<?php endif; ?>
 				<?php endif; ?>
 			</div>
 		</div>
